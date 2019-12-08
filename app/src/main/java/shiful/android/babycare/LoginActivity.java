@@ -30,12 +30,10 @@ public class LoginActivity extends AppCompatActivity {
     Button btnSignUp,btnLogin;
     //ProgressDialog object declaration
     private ProgressDialog loading;
-    private static String URL_Login="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
 
         //Link up to java object to xml Button id
         btnSignUp=(Button)findViewById(R.id.btn_gotoRegister);
@@ -100,12 +98,12 @@ public class LoginActivity extends AppCompatActivity {
             loading.show();
 
             //Creating a string request
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_Login,
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, Constant.LOGIN_URL,
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
 
-                           /* Log.d("Response",""+response);
+                            Log.d("Response",""+response);
                             //If we are getting success from server
                             if (response.equals("success")) {
                                 //Creating a shared preference
@@ -144,7 +142,7 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, "Invalid user cell or password", Toast.LENGTH_LONG).show();
                                 loading.dismiss();
                             }
-*/                        }
+                        }
                     },
 
                     new Response.ErrorListener() {
@@ -161,8 +159,8 @@ public class LoginActivity extends AppCompatActivity {
                 protected Map<String, String> getParams() throws AuthFailureError {
                     Map<String, String> params = new HashMap<>();
                     //Adding parameters to request
-                    params.put("cell", cell);
-                    params.put("password", password);
+                    params.put(Constant.KEY_CELL, cell);
+                    params.put(Constant.KEY_PASSWORD, password);
 
                     //returning parameter
                     return params;
