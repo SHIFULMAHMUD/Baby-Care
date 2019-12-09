@@ -1,13 +1,7 @@
 package shiful.android.babycare;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.res.AssetManager;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -18,25 +12,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.Toast;
 
-import com.github.barteksc.pdfviewer.PDFView;
-import com.github.barteksc.pdfviewer.util.FitPolicy;
-
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.List;
-
-public class MainActivity extends AppCompatActivity
+public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    Button read,user;
+    Button read,user,baby,notification;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -53,7 +37,7 @@ public class MainActivity extends AppCompatActivity
         read=findViewById(R.id.b7);
         read.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,Pdf.class);
+                Intent intent=new Intent(HomeActivity.this,Pdf.class);
                 startActivity(intent);
             }
         });
@@ -62,59 +46,27 @@ public class MainActivity extends AppCompatActivity
         user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,UserProfile.class);
+                Intent intent=new Intent(HomeActivity.this,UserProfile.class);
                 startActivity(intent);
             }
         });
-
+        baby=findViewById(R.id.b2);
+        baby.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(HomeActivity.this,AddBaby.class);
+                startActivity(intent);
+            }
+        });
+        notification=findViewById(R.id.b5);
+        notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(HomeActivity.this, NotificationActivity.class);
+                startActivity(intent);
+            }
+        });
     }
-    /*private void ReadPDF()
-    {
-        AssetManager assetManager = getAssets();
-        InputStream in = null;
-        OutputStream out = null;
-        File file = new File(getFilesDir(), "babycare.pdf"); //<= PDF file Name
-        try
-        {
-            in = assetManager.open("babycare.pdf"); //<= PDF file Name
-            out = openFileOutput(file.getName(), Context.MODE_WORLD_READABLE);
-            copypdf(in, out);
-            in.close();
-            in = null;
-            out.flush();
-            out.close();
-            out = null;
-        } catch (Exception e)
-        {
-            System.out.println(e.getMessage());
-        }
-        PackageManager packageManager = getPackageManager();
-        Intent testIntent = new Intent(Intent.ACTION_VIEW);
-        testIntent.setType("application/pdf");
-        List list = packageManager.queryIntentActivities(testIntent, PackageManager.MATCH_DEFAULT_ONLY);
-        if (list.size() > 0 && file.isFile()) {
-            //Toast.makeText(MainActivity.this,"Pdf Reader Exist !",Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent();
-            intent.setAction(Intent.ACTION_VIEW);
-            intent.setDataAndType(
-                    Uri.parse("file://" + getFilesDir() + "assets/babycare.pdf"),
-                    "application/pdf");
-            startActivity(intent);
-        }
-        else {
-            // show toast when => The PDF Reader is not installed !
-            Toast.makeText(MainActivity.this,"Pdf Reader NOT Exist !", Toast.LENGTH_SHORT).show();
-        }
-    }
-    private void copypdf(InputStream in, OutputStream out) throws IOException {
-        byte[] buffer = new byte[1024];
-        int read;
-        while ((read = in.read(buffer)) != -1)
-        {
-            out.write(buffer, 0, read);
-        }
-
-    }*/
 
     @Override
     public void onBackPressed() {

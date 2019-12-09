@@ -20,13 +20,13 @@ public class SplashActivity extends AppCompatActivity {
         //This method is used so that your splash activity
         //can cover the entire screen.
         setContentView(R.layout.activity_splash);
-        //this will bind your MainActivity.class file with activity_main.
+        //this will bind your HomeActivity.class file with activity_home.
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 Intent i=new Intent(SplashActivity.this,
-                        MainActivity.class);
+                        LoginActivity.class);
                 //Intent is used to switch from one activity to another.
 
                 startActivity(i);

@@ -8,6 +8,8 @@ public class Constant {
     public static final String LOGIN_URL = MAIN_URL+"/login.php";
     //url for user view
     public static final String USER_VIEW_URL = MAIN_URL+"/view_user.php?cell=";
+    //url for add baby
+    public static final String ADD_BABY_URL = MAIN_URL+"/add_baby.php";
     //Keys for server communications
     public static final String KEY_ID = "id";
     public static final String KEY_NAME = "name";
@@ -15,6 +17,11 @@ public class Constant {
     public static final String KEY_EMAIL = "email";
     public static final String KEY_GENDER = "gender";
     public static final String KEY_PASSWORD = "password";
+
+    public static final String KEY_BABY_NAME = "baby_name";
+    public static final String KEY_BABY_GENDER = "baby_gender";
+    public static final String KEY_BLOODGROUP = "blood_group";
+    public static final String KEY_DOB = "date_of_birth";
 
     //share preference
     //We will use this to store the user cell number into shared preference

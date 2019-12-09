@@ -121,7 +121,7 @@ public class LoginActivity extends AppCompatActivity {
 
                                 loading.dismiss();
                                 //Starting Home activity
-                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                                 startActivity(intent);
                                 Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
 
