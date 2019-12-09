@@ -6,7 +6,8 @@ public class Constant {
 
     public static final String SIGNUP_URL = MAIN_URL+"/register.php";
     public static final String LOGIN_URL = MAIN_URL+"/login.php";
-
+    //url for user view
+    public static final String USER_VIEW_URL = MAIN_URL+"/view_user.php?cell=";
     //Keys for server communications
     public static final String KEY_ID = "id";
     public static final String KEY_NAME = "name";

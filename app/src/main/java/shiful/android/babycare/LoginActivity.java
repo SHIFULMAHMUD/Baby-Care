@@ -1,3 +1,4 @@
+
 package shiful.android.babycare;
 
         import android.app.ProgressDialog;
@@ -49,8 +50,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                //Call login function
-                login();
+                //Call AppSingleton function
+                AppSingleton();
 
             }
         });
@@ -67,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     //LoginActivity function
-    private void login() {
+    private void AppSingleton() {
         //Getting values from edit texts
         final String cell = etxtCell.getText().toString().trim();
         final String password = etxtPassword.getText().toString().trim();
@@ -125,10 +126,6 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
 
                             }
-
-
-
-
                             else if(response.equals("failure")) {
                                 //If the server response is not success
                                 //Displaying an error message on toast

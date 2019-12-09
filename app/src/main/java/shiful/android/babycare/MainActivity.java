@@ -31,7 +31,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    Button read;
+    Button read,user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +58,14 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        user=findViewById(R.id.b1);
+        user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,UserProfile.class);
+                startActivity(intent);
+            }
+        });
 
     }
     /*private void ReadPDF()
