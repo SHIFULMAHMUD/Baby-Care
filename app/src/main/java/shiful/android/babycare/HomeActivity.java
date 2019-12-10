@@ -15,7 +15,7 @@ import android.widget.Button;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    Button read,user,baby,notification;
+    Button read,user,addbaby,showbaby;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,19 +50,19 @@ public class HomeActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
-        baby=findViewById(R.id.b2);
-        baby.setOnClickListener(new View.OnClickListener() {
+        addbaby=findViewById(R.id.b2);
+        addbaby.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(HomeActivity.this,AddBaby.class);
                 startActivity(intent);
             }
         });
-        notification=findViewById(R.id.b5);
-        notification.setOnClickListener(new View.OnClickListener() {
+        showbaby=findViewById(R.id.b3);
+        showbaby.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(HomeActivity.this, NotificationActivity.class);
+                Intent intent=new Intent(HomeActivity.this,ViewBaby.class);
                 startActivity(intent);
             }
         });

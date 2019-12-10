@@ -28,9 +28,9 @@ import java.util.Map;
 
 public class AddBaby extends AppCompatActivity {
     Button btnAdd;
-    EditText etxtName,etxtGender,etxtBloodgroup,etxtDob;
+    EditText etxtName,etxtGender,etxtBloodgroup,etxtDob,etxtBp;
     private ProgressDialog loading;
-
+    String getCell;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +41,13 @@ public class AddBaby extends AppCompatActivity {
         etxtGender=(EditText)findViewById(R.id.et_gender);
         etxtBloodgroup=(EditText)findViewById(R.id.et_bg);
         etxtDob=(EditText)findViewById(R.id.et_dob);
+        etxtBp=(EditText)findViewById(R.id.et_bp);
+
+        //Fetching cell from shared preferences
+        SharedPreferences sharedPreferences;
+        sharedPreferences =getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        getCell = sharedPreferences.getString(Constant.CELL_SHARED_PREF, "Not Available");
+
 /*
         getSupportActionBar().setHomeButtonEnabled(true); //for back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
@@ -84,6 +91,7 @@ public class AddBaby extends AppCompatActivity {
         final String baby_gender=etxtGender.getText().toString();
         final String blood_group=etxtBloodgroup.getText().toString();
         final String date_of_birth=etxtDob.getText().toString();
+        final String birth_place=etxtBp.getText().toString();
 
 
         if (baby_name.isEmpty())
@@ -102,6 +110,10 @@ public class AddBaby extends AppCompatActivity {
         else if(date_of_birth.isEmpty())
         {
             Toast.makeText(this, "Date of Birth Can't Empty", Toast.LENGTH_SHORT).show();
+        }
+        else if(birth_place.isEmpty())
+        {
+            Toast.makeText(this, "Birth Place Can't Empty", Toast.LENGTH_SHORT).show();
         }
 
         else {
@@ -178,6 +190,8 @@ public class AddBaby extends AppCompatActivity {
                     params.put(Constant.KEY_BABY_GENDER, baby_gender);
                     params.put(Constant.KEY_BLOODGROUP, blood_group);
                     params.put(Constant.KEY_DOB, date_of_birth);
+                    params.put(Constant.KEY_BP, birth_place);
+                    params.put(Constant.KEY_USER_CELL, getCell);
 
                     // Log.d("ID", getID);
 

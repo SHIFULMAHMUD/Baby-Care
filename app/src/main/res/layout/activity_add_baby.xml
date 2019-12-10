@@ -70,7 +70,7 @@ tools:context=".AddBaby">
             android:layout_marginTop="30dp">
 
             <ImageView
-                android:id="@+id/iv_user"
+                android:id="@+id/iv_baby"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@color/colorPrimary"
@@ -82,12 +82,12 @@ tools:context=".AddBaby">
                 android:id="@+id/et_babyname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/iv_user"
+                android:layout_alignBottom="@+id/iv_baby"
                 android:layout_alignParentTop="true"
-                android:layout_toRightOf="@+id/iv_user"
+                android:layout_toRightOf="@+id/iv_baby"
                 android:inputType="text"
                 android:background="#bcbbbb"
-                android:hint="Name"
+                android:hint="Baby Name"
                 android:paddingLeft="20dp"
                 android:textSize="15sp" />
 
@@ -102,7 +102,7 @@ tools:context=".AddBaby">
             android:layout_marginTop="15dp">
 
             <ImageView
-                android:id="@+id/iv_phone"
+                android:id="@+id/iv_gender"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@color/colorPrimary"
@@ -113,7 +113,7 @@ tools:context=".AddBaby">
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_alignParentTop="true"
-                android:layout_toRightOf="@+id/iv_phone"
+                android:layout_toRightOf="@+id/iv_gender"
                 android:background="#bcbbbb"
                 android:hint="Gender"
                 android:id="@+id/et_gender"
@@ -133,7 +133,7 @@ tools:context=".AddBaby">
             android:layout_marginTop="15dp">
 
             <ImageView
-                android:id="@+id/iv_email"
+                android:id="@+id/iv_bg"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@color/colorPrimary"
@@ -144,13 +144,13 @@ tools:context=".AddBaby">
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/iv_email"
+                android:layout_alignBottom="@+id/iv_bg"
                 android:layout_alignParentTop="true"
-                android:layout_toRightOf="@+id/iv_email"
+                android:layout_toRightOf="@+id/iv_bg"
                 android:background="#bcbbbb"
                 android:hint="Blood Group"
                 android:id="@+id/et_bg"
-                android:inputType="textPassword"
+                android:inputType="text"
                 android:paddingLeft="20dp"
                 android:textSize="15sp" />
 
@@ -165,7 +165,7 @@ tools:context=".AddBaby">
             android:layout_marginTop="15dp">
 
             <ImageView
-                android:id="@+id/iv_gender"
+                android:id="@+id/iv_dob"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@color/colorPrimary"
@@ -176,13 +176,45 @@ tools:context=".AddBaby">
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/iv_gender"
+                android:layout_alignBottom="@+id/iv_dob"
                 android:layout_alignParentTop="true"
-                android:layout_toRightOf="@+id/iv_gender"
+                android:layout_toRightOf="@+id/iv_dob"
                 android:background="#bcbbbb"
                 android:hint="Date of Birth"
                 android:id="@+id/et_dob"
                 android:inputType="date"
+                android:paddingLeft="20dp"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/relativeLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout4"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:id="@+id/iv_bp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/colorPrimary"
+                android:padding="8dp"
+                android:src="@drawable/date"
+                android:tint="#FFF" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_bp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/iv_bp"
+                android:background="#bcbbbb"
+                android:hint="Birth Place Address"
+                android:id="@+id/et_bp"
+                android:inputType="text"
                 android:paddingLeft="20dp"
                 android:textSize="15sp" />
 
@@ -192,7 +224,7 @@ tools:context=".AddBaby">
             android:id="@+id/add_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/relativeLayout4"
+            android:layout_below="@+id/relativeLayout5"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginTop="35dp"

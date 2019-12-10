@@ -4,8 +4,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -22,7 +20,7 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".NotificationActivity" />
+
         <activity
             android:name=".SplashActivity"
             android:label="@string/app_name"
@@ -37,24 +35,7 @@
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
-        <activity android:name=".AddReminderActivity"
-            android:label="@string/title_activity_add_reminder"
-            android:parentActivityName=".NotificationActivity"
-            android:theme="@style/AppTheme">
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".NotificationActivity"
-                />
-        </activity>
-        <provider
-            android:name=".data.AlarmReminderProvider"
-            android:authorities="shiful.android.babycare"
-            android:exported="false" />
 
-        <service
-            android:name=".reminder.ReminderAlarmService"
-            android:exported="false" />
     </application>
 
 </manifest>
