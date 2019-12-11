@@ -10,6 +10,8 @@ public class Constant {
     public static final String USER_VIEW_URL = MAIN_URL+"/view_user.php?cell=";
     //url for add baby
     public static final String ADD_BABY_URL = MAIN_URL+"/add_baby.php";
+    //url for view doctor
+    public static final String VIEW_DOC_URL = MAIN_URL+"/view_doctor.php";
     //url for view baby
     public static final String VIEW_BABY_URL = MAIN_URL+"/view_baby.php?cell=";
     //Keys for server communications
@@ -27,6 +29,10 @@ public class Constant {
     public static final String KEY_BP = "birth_place";
     public static final String KEY_USER_CELL = "get_cell";
 
+    public static final String KEY_DOCTOR_NAME = "doctor_name";
+    public static final String KEY_DOCTOR_CELL = "doctor_cell";
+    public static final String KEY_DOCTOR_ADDRESS = "doctor_address";
+    public static final String KEY_DOCTOR_DESCRIPTION = "doctor_description";
     //share preference
     //We will use this to store the user cell number into shared preference
     public static final String SHARED_PREF_NAME = "shiful.android.babycare"; //pcakage name+ id
