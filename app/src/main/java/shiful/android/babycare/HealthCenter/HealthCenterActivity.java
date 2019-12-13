@@ -1,18 +1,12 @@
-package shiful.android.babycare;
+package shiful.android.babycare.HealthCenter;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -31,39 +25,32 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class ViewBaby extends AppCompatActivity {
+import shiful.android.babycare.Constant;
+import shiful.android.babycare.Home.HomeActivity;
+import shiful.android.babycare.R;
+
+
+public class HealthCenterActivity extends AppCompatActivity {
     ListView CustomList;
-    String getCell;
-    ImageView imgNoData;
     private ProgressDialog loading;
 
     int MAX_SIZE=999;
 
-    public String babyName[]=new String[MAX_SIZE];
-    public String babyGender[]=new String[MAX_SIZE];
-    public String babyBg[]=new String[MAX_SIZE];
-    public String babyDob[]=new String[MAX_SIZE];
-    public String babyBp[]=new String[MAX_SIZE];
-
+    public String hcName[]=new String[MAX_SIZE];
+    public String hcPhone[]=new String[MAX_SIZE];
+    public String hcLocation[]=new String[MAX_SIZE];
+    public String hcWebsite[]=new String[MAX_SIZE];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_baby);
+        setContentView(R.layout.activity_health_center);
 
-        CustomList=(ListView)findViewById(R.id.baby_list);
+        CustomList=(ListView)findViewById(R.id.hc_list);
         //imgNoData=(ImageView)findViewById(R.id.imgNoData);
 
         /*getSupportActionBar().setHomeButtonEnabled(true); //for back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
         getSupportActionBar().setTitle("Contacts");*/
-
-        //Fetching cell from shared preferences
-        SharedPreferences sharedPreferences;
-        sharedPreferences =getSharedPreferences(Constant.SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        getCell = sharedPreferences.getString(Constant.CELL_SHARED_PREF, "Not Available");
-
-        //Log
-        Log.d("SP_CELL",getCell);
 
 
         //call function to get data
@@ -75,13 +62,13 @@ public class ViewBaby extends AppCompatActivity {
     private void getData(String text) {
 
         //for showing progress dialog
-        loading = new ProgressDialog(ViewBaby.this);
+        loading = new ProgressDialog(shiful.android.babycare.HealthCenter.HealthCenterActivity.this);
         loading.setIcon(R.drawable.wait_icon);
         loading.setTitle("Loading");
         loading.setMessage("Please wait....");
         loading.show();
 
-        String URL = Constant.VIEW_BABY_URL+getCell;
+        String URL = Constant.VIEW_HEALTH_CENTER_URL;
 
         StringRequest stringRequest = new StringRequest(URL, new Response.Listener<String>() {
             @Override
@@ -95,11 +82,11 @@ public class ViewBaby extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
 
                         loading.dismiss();
-                        Toast.makeText(ViewBaby.this, "Network Error!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(shiful.android.babycare.HealthCenter.HealthCenterActivity.this, "Network Error!", Toast.LENGTH_SHORT).show();
                     }
                 });
 
-        RequestQueue requestQueue = Volley.newRequestQueue(ViewBaby.this);
+        RequestQueue requestQueue = Volley.newRequestQueue(shiful.android.babycare.HealthCenter.HealthCenterActivity.this);
         requestQueue.add(stringRequest);
 
     }
@@ -118,9 +105,9 @@ public class ViewBaby extends AppCompatActivity {
 
             if (result.length()==0)
             {
-                Toast.makeText(ViewBaby.this, "No Data Available!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(shiful.android.babycare.HealthCenter.HealthCenterActivity.this, "No Data Available!", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(ViewBaby.this, HomeActivity.class);
+                Intent intent = new Intent(shiful.android.babycare.HealthCenter.HealthCenterActivity.this, HomeActivity.class);
 
                 startActivity(intent);
                 //imgNoData.setImageResource(R.drawable.nodata);
@@ -131,29 +118,26 @@ public class ViewBaby extends AppCompatActivity {
                 for (int i = 0; i < result.length(); i++) {
                     JSONObject jo = result.getJSONObject(i);
 
-                    String baby_name = jo.getString(Constant.KEY_BABY_NAME);
-                    String baby_gender = jo.getString(Constant.KEY_BABY_GENDER);
-                    String blood_group = jo.getString(Constant.KEY_BLOODGROUP);
-                    String date_of_birth = jo.getString(Constant.KEY_DOB);
-                    String birth_place = jo.getString(Constant.KEY_BP);
+                    String hc_name = jo.getString(Constant.KEY_HC_NAME);
+                    String hc_phone = jo.getString(Constant.KEY_HC_PHONE);
+                    String hc_location = jo.getString(Constant.KEY_HC_LOCATION);
+                    String hc_website = jo.getString(Constant.KEY_HC_WEBSITE);
 
                     //insert data into array for put extra
 
-                    babyName[i] = baby_name;
-                    babyGender[i] = baby_gender;
-                    babyBg[i] = blood_group;
-                    babyDob[i] = date_of_birth;
-                    babyBp[i] = birth_place;
+                    hcName[i] = hc_name;
+                    hcPhone[i] = hc_phone;
+                    hcLocation[i] = hc_location;
+                    hcWebsite[i] = hc_website;
 
                     //put value into Hashmap
-                    HashMap<String, String> user_data = new HashMap<>();
-                    user_data.put(Constant.KEY_BABY_NAME, baby_name);
-                    user_data.put(Constant.KEY_BABY_GENDER, baby_gender);
-                    user_data.put(Constant.KEY_BLOODGROUP, blood_group);
-                    user_data.put(Constant.KEY_DOB, date_of_birth);
-                    user_data.put(Constant.KEY_BP, birth_place);
+                    HashMap<String, String> hc_data = new HashMap<>();
+                    hc_data.put(Constant.KEY_HC_NAME, hc_name);
+                    hc_data.put(Constant.KEY_HC_PHONE, hc_phone);
+                    hc_data.put(Constant.KEY_HC_LOCATION, hc_location);
+                    hc_data.put(Constant.KEY_HC_WEBSITE, hc_website);
 
-                    list.add(user_data);
+                    list.add(hc_data);
                 }
             }
         } catch (JSONException e) {
@@ -161,10 +145,26 @@ public class ViewBaby extends AppCompatActivity {
         }
 
         ListAdapter adapter = new SimpleAdapter(
-                ViewBaby.this, list, R.layout.baby_list_items,
-                new String[]{Constant.KEY_BABY_NAME, Constant.KEY_BABY_GENDER, Constant.KEY_BLOODGROUP,Constant.KEY_DOB,Constant.KEY_BP},
-                new int[]{R.id.txt_name, R.id.txt_gender,R.id.txt_bg,R.id.txt_dob,R.id.txt_bp});
+                shiful.android.babycare.HealthCenter.HealthCenterActivity.this, list, R.layout.healthcare_list_items,
+                new String[]{Constant.KEY_HC_NAME, Constant.KEY_HC_PHONE},
+                new int[]{R.id.txt_hc_name, R.id.txt_hc_cell});
         CustomList.setAdapter(adapter);
+
+        CustomList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+
+                Intent intent=new Intent(shiful.android.babycare.HealthCenter.HealthCenterActivity.this, HealthCareDetails.class);
+                intent.putExtra("name",hcName[position]);
+                intent.putExtra("phone",hcPhone[position]);
+                intent.putExtra("location",hcLocation[position]);
+                intent.putExtra("website",hcWebsite[position]);
+
+                startActivity(intent);
+
+            }
+        });
 
     }
 

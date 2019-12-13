@@ -1,4 +1,4 @@
-package shiful.android.babycare;
+package shiful.android.babycare.Baby;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -25,6 +25,9 @@ import com.android.volley.toolbox.Volley;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import shiful.android.babycare.Constant;
+import shiful.android.babycare.R;
 
 public class AddBaby extends AppCompatActivity {
     Button btnAdd;

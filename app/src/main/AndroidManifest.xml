@@ -13,17 +13,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DoctorDetailsActivity"></activity>
-        <activity android:name=".DoctorActivity" />
-        <activity android:name=".ViewBaby" />
-        <activity android:name=".AddBaby" />
-        <activity android:name=".UserProfile" />
-        <activity android:name=".Pdf" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".Vaccine.VaccineDetailsActivity"></activity>
+        <activity android:name=".Vaccine.VaccineActivity" />
+        <activity android:name=".HealthCenter.HealthCareDetails" />
+        <activity android:name=".HealthCenter.HealthCenterActivity" />
+        <activity android:name=".Baby.BabyDetailsActivity" />
+        <activity android:name=".Doctor.DoctorDetailsActivity" />
+        <activity android:name=".Doctor.DoctorActivity" />
+        <activity android:name=".Baby.ViewBaby" />
+        <activity android:name=".Baby.AddBaby" />
+        <activity android:name=".User.UserProfile" />
+        <activity android:name=".Home.PdfActivity" />
+        <activity android:name=".Home.HomeActivity" />
+        <activity android:name=".User.RegisterActivity" />
+        <activity android:name=".User.LoginActivity" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".Home.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

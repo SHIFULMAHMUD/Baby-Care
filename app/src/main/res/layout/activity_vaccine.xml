@@ -4,30 +4,20 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".Baby.ViewBaby">
+tools:context=".Vaccine.VaccineActivity">
 
 <LinearLayout
-    android:id="@+id/layout2"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <ListView
-        android:id="@+id/baby_list"
+        android:id="@+id/vaccine_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="#fff"
         android:dividerHeight="3dp" />
 </LinearLayout>
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="30dp"
-        android:layout_marginRight="30dp"
-        app:srcCompat="@drawable/add"
-        tools:ignore="VectorDrawableCompat" />
 
 </RelativeLayout>

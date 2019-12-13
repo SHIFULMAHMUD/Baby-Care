@@ -1,4 +1,4 @@
-package shiful.android.babycare;
+package shiful.android.babycare.Home;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,9 +13,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import shiful.android.babycare.Baby.ViewBaby;
+import shiful.android.babycare.Doctor.DoctorActivity;
+import shiful.android.babycare.HealthCenter.HealthCenterActivity;
+import shiful.android.babycare.R;
+import shiful.android.babycare.User.UserProfile;
+import shiful.android.babycare.Vaccine.VaccineActivity;
+
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    Button read,user,addbaby,showbaby,showdoctor;
+    Button read,user,showbaby,showdoctor,showhealthcenter,showvaccine;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +44,7 @@ public class HomeActivity extends AppCompatActivity
         read=findViewById(R.id.b7);
         read.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent=new Intent(HomeActivity.this,Pdf.class);
+                Intent intent=new Intent(HomeActivity.this, PdfActivity.class);
                 startActivity(intent);
             }
         });
@@ -46,7 +53,7 @@ public class HomeActivity extends AppCompatActivity
         user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(HomeActivity.this,UserProfile.class);
+                Intent intent=new Intent(HomeActivity.this, UserProfile.class);
                 startActivity(intent);
             }
         });
@@ -54,7 +61,7 @@ public class HomeActivity extends AppCompatActivity
         showbaby.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(HomeActivity.this,ViewBaby.class);
+                Intent intent=new Intent(HomeActivity.this, ViewBaby.class);
                 startActivity(intent);
             }
         });
@@ -62,7 +69,23 @@ public class HomeActivity extends AppCompatActivity
         showdoctor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(HomeActivity.this,DoctorActivity.class);
+                Intent intent=new Intent(HomeActivity.this, DoctorActivity.class);
+                startActivity(intent);
+            }
+        });
+        showhealthcenter=findViewById(R.id.b6);
+        showhealthcenter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(HomeActivity.this, HealthCenterActivity.class);
+                startActivity(intent);
+            }
+        });
+        showvaccine=findViewById(R.id.b4);
+        showvaccine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(HomeActivity.this, VaccineActivity.class);
                 startActivity(intent);
             }
         });

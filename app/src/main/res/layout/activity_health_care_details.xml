@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorAccent"
-    android:padding="15dp"
-    tools:context=".Doctor.DoctorDetailsActivity">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#009688"
+android:padding="15dp"
+tools:context=".HealthCenter.HealthCareDetails">
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -19,13 +19,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="Doctor Name:"
+            android:text="Health Center:"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@android:color/white"/>
 
         <TextView
-            android:id="@+id/doc_name"
+            android:id="@+id/hc_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -53,7 +53,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:id="@+id/doc_phone"
+            android:id="@+id/hc_phone"
             android:hint="Md Sazzad Hossain"
             android:textSize="18sp"
             android:textColor="@android:color/white"/>
@@ -78,7 +78,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:id="@+id/doc_address"
+            android:id="@+id/hc_address"
             android:hint="Md Sazzad Hossain"
             android:textSize="18sp"
             android:textColor="@android:color/white"/>
@@ -94,7 +94,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="Description:"
+            android:text="Website:"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@android:color/white"/>
@@ -103,10 +103,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:id="@+id/doc_description"
+            android:id="@+id/hc_website"
             android:hint="Md Sazzad Hossain"
             android:textSize="18sp"
-            android:textColor="@android:color/white"/>
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:textColorLink="@android:color/white"
+            />
     </LinearLayout>
 </RelativeLayout>
 

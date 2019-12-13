@@ -1,10 +1,13 @@
-package shiful.android.babycare;
+package shiful.android.babycare.Home;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.WindowManager;
+
+import shiful.android.babycare.R;
+import shiful.android.babycare.User.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity {
 

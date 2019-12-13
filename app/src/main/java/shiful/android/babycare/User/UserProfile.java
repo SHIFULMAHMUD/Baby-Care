@@ -1,4 +1,4 @@
-package shiful.android.babycare;
+package shiful.android.babycare.User;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -22,6 +22,10 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import shiful.android.babycare.Constant;
+import shiful.android.babycare.Home.HomeActivity;
+import shiful.android.babycare.R;
 
 public class UserProfile extends AppCompatActivity {
     TextView nametv, emailtv, celltv, gendertv;

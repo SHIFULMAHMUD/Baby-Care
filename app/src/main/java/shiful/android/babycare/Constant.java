@@ -12,6 +12,10 @@ public class Constant {
     public static final String ADD_BABY_URL = MAIN_URL+"/add_baby.php";
     //url for view doctor
     public static final String VIEW_DOC_URL = MAIN_URL+"/view_doctor.php";
+    //url for view health center
+    public static final String VIEW_HEALTH_CENTER_URL = MAIN_URL+"/view_health_center.php";
+    //url for vaccine view
+    public static final String VIEW_VACCINE_URL = MAIN_URL+"/vaccine.php";
     //url for view baby
     public static final String VIEW_BABY_URL = MAIN_URL+"/view_baby.php?cell=";
     //Keys for server communications
@@ -33,6 +37,18 @@ public class Constant {
     public static final String KEY_DOCTOR_CELL = "doctor_cell";
     public static final String KEY_DOCTOR_ADDRESS = "doctor_address";
     public static final String KEY_DOCTOR_DESCRIPTION = "doctor_description";
+
+    public static final String KEY_HC_NAME = "hc_name";
+    public static final String KEY_HC_PHONE = "hc_phone";
+    public static final String KEY_HC_LOCATION = "hc_location";
+    public static final String KEY_HC_WEBSITE = "hc_website";
+
+    public static final String KEY_VACCINE_NAME = "vaccine_name";
+    public static final String KEY_DISEASE_NAME = "disease";
+    public static final String KEY_DOSE_NO = "dose_no";
+    public static final String KEY_DOSE_INTERVAL = "dose_interval";
+    public static final String KEY_START_TIME = "start_time";
+    public static final String KEY_INJECT_ROUTE = "route";
     //share preference
     //We will use this to store the user cell number into shared preference
     public static final String SHARED_PREF_NAME = "shiful.android.babycare"; //pcakage name+ id

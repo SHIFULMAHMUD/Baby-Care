@@ -1,4 +1,4 @@
-package shiful.android.babycare;
+package shiful.android.babycare.User;
 
         import android.app.ProgressDialog;
         import android.content.Intent;
@@ -19,11 +19,11 @@ package shiful.android.babycare;
         import com.android.volley.toolbox.StringRequest;
         import com.android.volley.toolbox.Volley;
 
-        import org.json.JSONException;
-        import org.json.JSONObject;
-
         import java.util.HashMap;
         import java.util.Map;
+
+        import shiful.android.babycare.Constant;
+        import shiful.android.babycare.R;
 
 public class RegisterActivity extends AppCompatActivity {
 

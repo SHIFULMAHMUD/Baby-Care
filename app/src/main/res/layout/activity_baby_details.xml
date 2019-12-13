@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorAccent"
-    android:padding="15dp"
-    tools:context=".Doctor.DoctorDetailsActivity">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/colorAccent"
+android:padding="15dp"
+tools:context=".Baby.BabyDetailsActivity">
+
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="Doctor Name:"
+            android:text="Baby Name:"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@android:color/white"/>
 
         <TextView
-            android:id="@+id/doc_name"
+            android:id="@+id/baby_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -44,7 +43,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="Phone:"
+            android:text="Gender:"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@android:color/white"/>
@@ -53,7 +52,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:id="@+id/doc_phone"
+            android:id="@+id/baby_gender"
             android:hint="Md Sazzad Hossain"
             android:textSize="18sp"
             android:textColor="@android:color/white"/>
@@ -69,7 +68,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="Address:"
+            android:text="Blood Group:"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@android:color/white"/>
@@ -78,7 +77,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:id="@+id/doc_address"
+            android:id="@+id/blood_group"
             android:hint="Md Sazzad Hossain"
             android:textSize="18sp"
             android:textColor="@android:color/white"/>
@@ -94,7 +93,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="Description:"
+            android:text="Date of Birth:"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@android:color/white"/>
@@ -103,11 +102,34 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:id="@+id/doc_description"
+            android:id="@+id/date_of_birth"
+            android:hint="Md Sazzad Hossain"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_below="@+id/linearLayout4"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Birth Place:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/birth_place"
             android:hint="Md Sazzad Hossain"
             android:textSize="18sp"
             android:textColor="@android:color/white"/>
     </LinearLayout>
 </RelativeLayout>
-
-</ScrollView>

@@ -1,4 +1,4 @@
-package shiful.android.babycare;
+package shiful.android.babycare.Home;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,7 +6,9 @@ import android.os.Bundle;
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.util.FitPolicy;
 
-public class Pdf extends AppCompatActivity {
+import shiful.android.babycare.R;
+
+public class PdfActivity extends AppCompatActivity {
 
 
     @Override

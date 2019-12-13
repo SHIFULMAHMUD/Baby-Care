@@ -1,5 +1,5 @@
 
-package shiful.android.babycare;
+package shiful.android.babycare.User;
 
         import android.app.ProgressDialog;
         import android.content.Context;
@@ -22,6 +22,10 @@ package shiful.android.babycare;
         import com.android.volley.toolbox.Volley;
         import java.util.HashMap;
         import java.util.Map;
+
+        import shiful.android.babycare.Constant;
+        import shiful.android.babycare.Home.HomeActivity;
+        import shiful.android.babycare.R;
 
 public class LoginActivity extends AppCompatActivity {
 
