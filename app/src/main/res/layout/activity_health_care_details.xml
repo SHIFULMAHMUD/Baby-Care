@@ -5,15 +5,29 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:background="#009688"
-android:padding="15dp"
 tools:context=".HealthCenter.HealthCareDetails">
-<RelativeLayout
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
 
         <TextView
             android:layout_width="0dp"
@@ -37,8 +51,9 @@ tools:context=".HealthCenter.HealthCareDetails">
         android:id="@+id/linearLayout2"
         android:layout_below="@+id/linearLayout1"
         android:layout_width="match_parent"
+        android:layout_margin="10dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp">
+        >
 
         <TextView
             android:layout_width="0dp"
@@ -61,7 +76,7 @@ tools:context=".HealthCenter.HealthCareDetails">
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_below="@+id/linearLayout2"
-        android:layout_marginTop="15dp"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -86,7 +101,7 @@ tools:context=".HealthCenter.HealthCareDetails">
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_below="@+id/linearLayout3"
-        android:layout_marginTop="15dp"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -111,6 +126,6 @@ tools:context=".HealthCenter.HealthCareDetails">
             android:textColorLink="@android:color/white"
             />
     </LinearLayout>
-</RelativeLayout>
+</LinearLayout>
 
 </ScrollView>

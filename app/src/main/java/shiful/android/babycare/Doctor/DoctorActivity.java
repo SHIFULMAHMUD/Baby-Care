@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -44,6 +45,10 @@ public class DoctorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Child Specialist");
 
         CustomList=(ListView)findViewById(R.id.doctor_list);
         //imgNoData=(ImageView)findViewById(R.id.imgNoData);
@@ -95,7 +100,7 @@ public class DoctorActivity extends AppCompatActivity {
 
     private void showJSON(String response) {
 
-        //Create json object for receiving jason data
+        //Create json object for receiving json data
         JSONObject jsonObject = null;
         ArrayList<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>();
         try {

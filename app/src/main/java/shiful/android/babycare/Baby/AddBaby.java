@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -39,6 +40,10 @@ public class AddBaby extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_baby);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Baby Care");
+
         btnAdd=(Button)findViewById(R.id.add_btn);
         etxtName=(EditText)findViewById(R.id.et_babyname);
         etxtGender=(EditText)findViewById(R.id.et_gender);
@@ -67,7 +72,6 @@ public class AddBaby extends AppCompatActivity {
                         .setCancelable(false)
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-
 
                                 // Perform Your Task Here--When Yes Is Pressed.
                                 SaveContact(); //call SaveContact function
@@ -223,5 +227,4 @@ public class AddBaby extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
 }

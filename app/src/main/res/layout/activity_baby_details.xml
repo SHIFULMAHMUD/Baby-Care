@@ -5,14 +5,29 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:background="@color/colorAccent"
-android:padding="15dp"
 tools:context=".Baby.BabyDetailsActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp">
+        android:layout_margin="10dp">
 
         <TextView
             android:layout_width="0dp"
@@ -37,7 +52,7 @@ tools:context=".Baby.BabyDetailsActivity">
         android:layout_below="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp">
+        android:layout_margin="10dp">
 
         <TextView
             android:layout_width="0dp"
@@ -60,7 +75,7 @@ tools:context=".Baby.BabyDetailsActivity">
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_below="@+id/linearLayout2"
-        android:layout_marginTop="15dp"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -85,7 +100,7 @@ tools:context=".Baby.BabyDetailsActivity">
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_below="@+id/linearLayout3"
-        android:layout_marginTop="15dp"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -110,7 +125,7 @@ tools:context=".Baby.BabyDetailsActivity">
     <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_below="@+id/linearLayout4"
-        android:layout_marginTop="15dp"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -131,5 +146,6 @@ tools:context=".Baby.BabyDetailsActivity">
             android:hint="Md Sazzad Hossain"
             android:textSize="18sp"
             android:textColor="@android:color/white"/>
+    </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

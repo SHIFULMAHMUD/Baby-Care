@@ -2,6 +2,7 @@ package shiful.android.babycare.Home;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -11,18 +12,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 
 import shiful.android.babycare.Baby.ViewBaby;
 import shiful.android.babycare.Doctor.DoctorActivity;
 import shiful.android.babycare.HealthCenter.HealthCenterActivity;
 import shiful.android.babycare.R;
+import shiful.android.babycare.User.LoginActivity;
 import shiful.android.babycare.User.UserProfile;
 import shiful.android.babycare.Vaccine.VaccineActivity;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    Button read,user,showbaby,showdoctor,showhealthcenter,showvaccine;
+    CardView read,user,showbaby,showdoctor,showhealthcenter,showvaccine,signout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +74,7 @@ public class HomeActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
-        showhealthcenter=findViewById(R.id.b6);
+        showhealthcenter=findViewById(R.id.b5);
         showhealthcenter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,6 +88,15 @@ public class HomeActivity extends AppCompatActivity
             public void onClick(View v) {
                 Intent intent=new Intent(HomeActivity.this, VaccineActivity.class);
                 startActivity(intent);
+            }
+        });
+        signout=findViewById(R.id.b8);
+        signout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(HomeActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

@@ -5,14 +5,28 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:background="@color/colorAccent"
-android:padding="15dp"
 tools:context=".Vaccine.VaccineDetailsActivity">
-<RelativeLayout
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
+        android:layout_margin="10dp"
         android:layout_height="wrap_content">
 
         <TextView
@@ -37,7 +51,7 @@ tools:context=".Vaccine.VaccineDetailsActivity">
         android:layout_below="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp">
+        android:layout_margin="10dp">
 
         <TextView
             android:layout_width="0dp"
@@ -59,7 +73,7 @@ tools:context=".Vaccine.VaccineDetailsActivity">
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_below="@+id/linearLayout2"
-        android:layout_marginTop="15dp"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -83,7 +97,7 @@ tools:context=".Vaccine.VaccineDetailsActivity">
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_below="@+id/linearLayout3"
-        android:layout_marginTop="15dp"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -107,7 +121,7 @@ tools:context=".Vaccine.VaccineDetailsActivity">
     <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_below="@+id/linearLayout4"
-        android:layout_marginTop="15dp"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -131,7 +145,7 @@ tools:context=".Vaccine.VaccineDetailsActivity">
     <LinearLayout
         android:id="@+id/linearLayout6"
         android:layout_below="@+id/linearLayout5"
-        android:layout_marginTop="15dp"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -152,6 +166,6 @@ tools:context=".Vaccine.VaccineDetailsActivity">
             android:textSize="18sp"
             android:textColor="@android:color/white"/>
     </LinearLayout>
-</RelativeLayout>
+</LinearLayout>
 
 </ScrollView>

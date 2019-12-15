@@ -2,6 +2,7 @@ package shiful.android.babycare.Baby;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
 import shiful.android.babycare.R;
@@ -14,6 +15,10 @@ public class BabyDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_baby_details);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Baby Details");
 
         txtName = findViewById(R.id.baby_name);
         txtGender = findViewById(R.id.baby_gender);

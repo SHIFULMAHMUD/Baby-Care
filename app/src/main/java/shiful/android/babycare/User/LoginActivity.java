@@ -7,6 +7,7 @@ package shiful.android.babycare.User;
         import android.content.SharedPreferences;
         import android.os.Bundle;
         import android.support.v7.app.AppCompatActivity;
+        import android.support.v7.widget.Toolbar;
         import android.util.Log;
         import android.view.View;
         import android.view.WindowManager;
@@ -39,6 +40,10 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Baby Care");
 
         //Link up to java object to xml Button id
         btnSignUp=(Button)findViewById(R.id.btn_gotoRegister);
