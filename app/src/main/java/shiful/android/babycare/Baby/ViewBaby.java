@@ -195,7 +195,6 @@ public class ViewBaby extends AppCompatActivity {
 
             }
         });
-
     }
 
     //for back button

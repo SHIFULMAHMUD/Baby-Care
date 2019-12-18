@@ -1,16 +1,25 @@
 package shiful.android.babycare.Baby;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 import shiful.android.babycare.R;
 
 public class BabyDetailsActivity extends AppCompatActivity {
     TextView txtName, txtGender, txtBg,txtDob,txtBp;
     String getName, getGender, getBg,getDob,getBp;
-
+    Button vacList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +34,6 @@ public class BabyDetailsActivity extends AppCompatActivity {
         txtBg = findViewById(R.id.blood_group);
         txtDob = findViewById(R.id.date_of_birth);
         txtBp = findViewById(R.id.birth_place);
-
 
         getName = getIntent().getExtras().getString("name");
         getGender = getIntent().getExtras().getString("gender");
@@ -44,5 +52,29 @@ public class BabyDetailsActivity extends AppCompatActivity {
         txtDob.setText(getDob);
         txtBp.setText(getBp);
 
+        vacList=findViewById(R.id.vacListBtn);
+        vacList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String sDate = getDob;
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+                Date date = null;
+                try {
+                    date = dateFormat.parse(sDate);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                Calendar calendar = Calendar.getInstance();
+                calendar.setTime(date);
+                calendar.add(Calendar.DATE, 40);
+                String nextDate = dateFormat.format(calendar.getTime());
+
+                Intent intent=new Intent(BabyDetailsActivity.this,VaccineList.class);
+                intent.putExtra("fromdate",getDob);
+                intent.putExtra("todate",nextDate);
+                startActivity(intent);
+
+            }
+    });
     }
 }

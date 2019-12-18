@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".Baby.VaccineList"></activity>
         <activity android:name=".Vaccine.VaccineDetailsActivity" />
         <activity android:name=".Vaccine.VaccineActivity" />
         <activity android:name=".HealthCenter.HealthCareDetails" />
