@@ -1,6 +1,7 @@
 package shiful.android.babycare.Baby;
 
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -12,8 +13,12 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -24,17 +29,24 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 import shiful.android.babycare.Constant;
 import shiful.android.babycare.R;
 
-public class AddBaby extends AppCompatActivity {
+public class AddBaby extends AppCompatActivity  implements
+        AdapterView.OnItemSelectedListener {
+    final Calendar myCalendar = Calendar.getInstance();
+    String val;
     Button btnAdd;
-    EditText etxtName,etxtGender,etxtBloodgroup,etxtDob,etxtBp;
+    EditText etxtName,etxtBloodgroup,etxtDob,etxtBp;
     private ProgressDialog loading;
     String getCell;
+    String[] gender = { "Male", "Female"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,9 +56,18 @@ public class AddBaby extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Baby Care");
 
+        //Getting the instance of Spinner and applying OnItemSelectedListener on it
+        Spinner spin = (Spinner) findViewById(R.id.sp_gender);
+        spin.setOnItemSelectedListener(this);
+
+        //Creating the ArrayAdapter instance having the country list
+        ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,gender);
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //Setting the ArrayAdapter data on the Spinner
+        spin.setAdapter(aa);
+
         btnAdd=(Button)findViewById(R.id.add_btn);
         etxtName=(EditText)findViewById(R.id.et_babyname);
-        etxtGender=(EditText)findViewById(R.id.et_gender);
         etxtBloodgroup=(EditText)findViewById(R.id.et_bg);
         etxtDob=(EditText)findViewById(R.id.et_dob);
         etxtBp=(EditText)findViewById(R.id.et_bp);
@@ -89,13 +110,44 @@ public class AddBaby extends AppCompatActivity {
             }
         });
 
+
+        final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                // TODO Auto-generated method stub
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                updateLabel();
+            }
+
+        };
+
+        etxtDob.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                new DatePickerDialog(AddBaby.this, date, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
+    }
+    private void updateLabel() {
+        String myFormat = "dd/MM/yyyy"; //In which you need put here
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+
+        etxtDob.setText(sdf.format(myCalendar.getTime()));
     }
     //Save contact method
     public void  SaveContact()
     {
 
         final String baby_name=etxtName.getText().toString();
-        final String baby_gender=etxtGender.getText().toString();
+        final String baby_gender=val;
         final String blood_group=etxtBloodgroup.getText().toString();
         final String date_of_birth=etxtDob.getText().toString();
         final String birth_place=etxtBp.getText().toString();
@@ -226,5 +278,14 @@ public class AddBaby extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+    //Performing action onItemSelected and onNothing selected
+    @Override
+    public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
+        val=gender[position];
+    }
+    @Override
+    public void onNothingSelected(AdapterView<?> arg0) {
+        // TODO Auto-generated method stub
     }
 }

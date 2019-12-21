@@ -121,16 +121,14 @@ tools:context=".Baby.AddBaby">
                 android:padding="8dp"
                 android:src="@drawable/gender"
                 android:tint="#FFF" />
-            <EditText
+            <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@+id/iv_gender"
                 android:background="#bcbbbb"
-                android:hint="Gender"
-                android:id="@+id/et_gender"
-                android:inputType="text"
-                android:paddingLeft="20dp"
+                android:id="@+id/sp_gender"
+                android:paddingLeft="15dp"
                 android:textSize="15sp" />
 
 
@@ -194,8 +192,10 @@ tools:context=".Baby.AddBaby">
                 android:background="#bcbbbb"
                 android:hint="Date of Birth"
                 android:id="@+id/et_dob"
-                android:inputType="date"
                 android:paddingLeft="20dp"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="false"
                 android:textSize="15sp" />
 
         </RelativeLayout>
@@ -214,7 +214,7 @@ tools:context=".Baby.AddBaby">
                 android:layout_height="40dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
-                android:src="@drawable/date"
+                android:src="@drawable/location"
                 android:tint="#FFF" />
 
             <EditText

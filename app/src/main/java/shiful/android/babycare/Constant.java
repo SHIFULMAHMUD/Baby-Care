@@ -18,6 +18,9 @@ public class Constant {
     public static final String VIEW_VACCINE_URL = MAIN_URL+"/vaccine.php";
     //url for view baby
     public static final String VIEW_BABY_URL = MAIN_URL+"/view_baby.php?cell=";
+    //url for checkbox
+    public static final String ADD_CHECKBOX_URL = MAIN_URL+"/checkbox.php";
+    public static final String VIEW_CHECKBOX_URL = MAIN_URL+"/view_checkbox.php?cell=";
     //Keys for server communications
     public static final String KEY_ID = "id";
     public static final String KEY_NAME = "name";
@@ -49,13 +52,16 @@ public class Constant {
     public static final String KEY_DOSE_INTERVAL = "dose_interval";
     public static final String KEY_START_TIME = "start_time";
     public static final String KEY_INJECT_ROUTE = "route";
+
+    public static final String KEY_VACCINE_ID = "vac_id";
+    public static final String KEY_MODE = "mode";
+    public static final String KEY_BABY_ID = "baby_id";
     //share preference
     //We will use this to store the user cell number into shared preference
     public static final String SHARED_PREF_NAME = "shiful.android.babycare"; //pcakage name+ id
 
     //This would be used to store the cell of current logged in user
     public static final String CELL_SHARED_PREF = "cell";
-
 
     //json array name.We will received data in this array
     public static final String JSON_ARRAY = "result";

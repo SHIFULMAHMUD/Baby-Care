@@ -18,7 +18,7 @@ import shiful.android.babycare.R;
 
 public class BabyDetailsActivity extends AppCompatActivity {
     TextView txtName, txtGender, txtBg,txtDob,txtBp;
-    String getName, getGender, getBg,getDob,getBp;
+    String getId,getName, getGender, getBg,getDob,getBp;
     Button vacList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,7 @@ public class BabyDetailsActivity extends AppCompatActivity {
         txtDob = findViewById(R.id.date_of_birth);
         txtBp = findViewById(R.id.birth_place);
 
+        getId = getIntent().getExtras().getString("id");
         getName = getIntent().getExtras().getString("name");
         getGender = getIntent().getExtras().getString("gender");
         getBg = getIntent().getExtras().getString("bloodgroup");
@@ -72,6 +73,7 @@ public class BabyDetailsActivity extends AppCompatActivity {
                 Intent intent=new Intent(BabyDetailsActivity.this,VaccineList.class);
                 intent.putExtra("fromdate",getDob);
                 intent.putExtra("todate",nextDate);
+                intent.putExtra("babyid",getId);
                 startActivity(intent);
 
             }

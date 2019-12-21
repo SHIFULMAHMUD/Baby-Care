@@ -41,7 +41,7 @@ public class ViewBaby extends AppCompatActivity {
     private ProgressDialog loading;
 
     int MAX_SIZE=999;
-
+    public String babyId[]=new String[MAX_SIZE];
     public String babyName[]=new String[MAX_SIZE];
     public String babyGender[]=new String[MAX_SIZE];
     public String babyBg[]=new String[MAX_SIZE];
@@ -145,7 +145,7 @@ public class ViewBaby extends AppCompatActivity {
 
                 for (int i = 0; i < result.length(); i++) {
                     JSONObject jo = result.getJSONObject(i);
-
+                    String baby_id = jo.getString(Constant.KEY_BABY_ID);
                     String baby_name = jo.getString(Constant.KEY_BABY_NAME);
                     String baby_gender = jo.getString(Constant.KEY_BABY_GENDER);
                     String blood_group = jo.getString(Constant.KEY_BLOODGROUP);
@@ -153,7 +153,7 @@ public class ViewBaby extends AppCompatActivity {
                     String birth_place = jo.getString(Constant.KEY_BP);
 
                     //insert data into array for put extra
-
+                    babyId[i]=baby_id;
                     babyName[i] = baby_name;
                     babyGender[i] = baby_gender;
                     babyBg[i] = blood_group;
@@ -162,6 +162,7 @@ public class ViewBaby extends AppCompatActivity {
 
                     //put value into Hashmap
                     HashMap<String, String> user_data = new HashMap<>();
+                    user_data.put(Constant.KEY_BABY_ID, baby_id);
                     user_data.put(Constant.KEY_BABY_NAME, baby_name);
                     user_data.put(Constant.KEY_BABY_GENDER, baby_gender);
                     user_data.put(Constant.KEY_BLOODGROUP, blood_group);
@@ -185,6 +186,7 @@ public class ViewBaby extends AppCompatActivity {
 
 
                 Intent intent=new Intent(ViewBaby.this,BabyDetailsActivity.class);
+                intent.putExtra("id",babyId[position]);
                 intent.putExtra("name",babyName[position]);
                 intent.putExtra("gender",babyGender[position]);
                 intent.putExtra("bloodgroup",babyBg[position]);

@@ -51,6 +51,7 @@
             android:textStyle="bold" />
 
         <CheckBox
+            android:id="@+id/chk_bcg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
@@ -131,6 +132,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/chk_penta1"
             android:layout_weight="1" />
     </LinearLayout>
     <LinearLayout
@@ -221,6 +223,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/chk_pcv1"
             android:layout_weight="1" />
     </LinearLayout>
     <LinearLayout
@@ -311,6 +314,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/chk_opv1"
             android:layout_weight="1" />
     </LinearLayout>
     <LinearLayout
@@ -401,6 +405,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/chk_penta2"
             android:layout_weight="1" />
     </LinearLayout>
     <LinearLayout
@@ -491,6 +496,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/chk_pcv2"
             android:layout_weight="1" />
     </LinearLayout>
     <LinearLayout
@@ -581,6 +587,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/chk_opv2"
             android:layout_weight="1" />
     </LinearLayout>
     <LinearLayout
@@ -671,6 +678,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/chk_penta3"
             android:layout_weight="1" />
     </LinearLayout>
     <LinearLayout
@@ -761,6 +769,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/chk_pcv3"
             android:layout_weight="1" />
     </LinearLayout>
     <LinearLayout
@@ -851,6 +860,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/chk_opv3"
             android:layout_weight="1" />
     </LinearLayout>
     <LinearLayout
@@ -941,6 +951,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/chk_opv4"
             android:layout_weight="1" />
     </LinearLayout>
     <LinearLayout
@@ -1031,6 +1042,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/chk_mr"
             android:layout_weight="1" />
     </LinearLayout>
     <LinearLayout
@@ -1108,6 +1120,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/chk_measles"
             android:layout_weight="1" />
     </LinearLayout>
     <LinearLayout
