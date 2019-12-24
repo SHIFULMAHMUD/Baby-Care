@@ -279,19 +279,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:background="#656"
+                    android:background="#4EAC27"
                     android:gravity="center">
                     <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:padding="5dp"
-                        android:src="@drawable/logout"/>
+                        android:src="@drawable/vaccin"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
                         android:textColor="@android:color/white"
-                        android:text="Sign Out"
+                        android:text="Order Vaccine"
                         android:layout_marginTop="10dp"
                         />
 

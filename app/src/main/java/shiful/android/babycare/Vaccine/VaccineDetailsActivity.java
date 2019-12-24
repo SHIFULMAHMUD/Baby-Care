@@ -1,15 +1,22 @@
 package shiful.android.babycare.Vaccine;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+
+import shiful.android.babycare.Baby.BabyDetailsActivity;
+import shiful.android.babycare.Baby.VaccineSchedule;
 import shiful.android.babycare.R;
 
 
 public class VaccineDetailsActivity extends AppCompatActivity {
     TextView txtVaccine, txtDisease, txtDoseno,txtDoseinterval,txtStarttime,txtRoute;
     String getVaccine, getDiseasename, getDoseno,getDoseinterval,getStarttime,getRoute;
+    Button reqVaccine;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +33,7 @@ public class VaccineDetailsActivity extends AppCompatActivity {
         txtDoseinterval = findViewById(R.id.interval);
         txtStarttime = findViewById(R.id.starting_time);
         txtRoute = findViewById(R.id.route);
-
+        reqVaccine=findViewById(R.id.btn_req);
 
         getVaccine = getIntent().getExtras().getString("name");
         getDiseasename = getIntent().getExtras().getString("disease");
@@ -39,7 +46,6 @@ public class VaccineDetailsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
         getSupportActionBar().setTitle("Contact Details");//for actionbar title*/
 
-
         txtVaccine.setText(getVaccine);
         txtDisease.setText(getDiseasename);
         txtDoseno.setText(getDoseno);
@@ -47,5 +53,13 @@ public class VaccineDetailsActivity extends AppCompatActivity {
         txtStarttime.setText(getStarttime);
         txtRoute.setText(getRoute);
 
+        reqVaccine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(VaccineDetailsActivity.this,RequestVaccine.class);
+                intent.putExtra("vaccine_name",getVaccine);
+                startActivity(intent);
+            }
+        });
     }
 }
