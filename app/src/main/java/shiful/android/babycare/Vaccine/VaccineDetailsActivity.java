@@ -18,7 +18,7 @@ public class VaccineDetailsActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Vaccine Details");
+        getSupportActionBar().setTitle("Vac Details");
 
         txtVaccine = findViewById(R.id.vac_name);
         txtDisease = findViewById(R.id.disease_name);

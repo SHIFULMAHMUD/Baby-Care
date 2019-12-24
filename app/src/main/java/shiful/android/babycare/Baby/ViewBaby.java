@@ -133,12 +133,8 @@ public class ViewBaby extends AppCompatActivity {
 
             if (result.length()==0)
             {
-                Toast.makeText(ViewBaby.this, "No Data Available!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ViewBaby.this, "Please Add Your Baby!", Toast.LENGTH_LONG).show();
 
-                Intent intent = new Intent(ViewBaby.this, HomeActivity.class);
-
-                startActivity(intent);
-                //imgNoData.setImageResource(R.drawable.nodata);
             }
 
             else {

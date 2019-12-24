@@ -57,7 +57,7 @@ public class VaccineList extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Vaccine Schedule");
+        getSupportActionBar().setTitle("Vac Schedule");
 
         //Fetching cell from shared preferences
         SharedPreferences sharedPreferences;
@@ -294,294 +294,7 @@ public class VaccineList extends AppCompatActivity {
 
                 }
             });
-        /*checkBox2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(VaccineList.this);
-                builder.setIcon(R.mipmap.ic_launcher)
-                        .setMessage("Have you used this vaccine?")
-                        .setCancelable(false)
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
 
-                                // Perform Your Task Here--When Yes Is Pressed.
-
-                                    SaveCheckbox(id_v2); //call SaveContact function
-                                    dialog.cancel();
-
-                            }
-                        })
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                // Perform Your Task Here--When No is pressed
-                                dialog.cancel();
-                            }
-                        }).show();
-
-            }
-        });
-        checkBox3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(VaccineList.this);
-                builder.setIcon(R.mipmap.ic_launcher)
-                        .setMessage("Have you used this vaccine?")
-                        .setCancelable(false)
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-
-                                // Perform Your Task Here--When Yes Is Pressed.
-
-                                    SaveCheckbox(id_v3); //call SaveContact function
-                                    dialog.cancel();
-
-                            }
-                        })
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                // Perform Your Task Here--When No is pressed
-                                dialog.cancel();
-                            }
-                        }).show();
-
-            }
-        });
-
-        checkBox4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(VaccineList.this);
-                builder.setIcon(R.mipmap.ic_launcher)
-                        .setMessage("Have you used this vaccine?")
-                        .setCancelable(false)
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-
-                                // Perform Your Task Here--When Yes Is Pressed.
-
-                                    SaveCheckbox(id_v4); //call SaveContact function
-                                    dialog.cancel();
-
-                            }
-                        })
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                // Perform Your Task Here--When No is pressed
-                                dialog.cancel();
-                            }
-                        }).show();
-
-            }
-        });
-        checkBox5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(VaccineList.this);
-                builder.setIcon(R.mipmap.ic_launcher)
-                        .setMessage("Have you used this vaccine?")
-                        .setCancelable(false)
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-
-                                // Perform Your Task Here--When Yes Is Pressed.
-
-                                    SaveCheckbox(id_v5); //call SaveContact function
-                                    dialog.cancel();
-
-                            }
-                        })
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                // Perform Your Task Here--When No is pressed
-                                dialog.cancel();
-                            }
-                        }).show();
-
-            }
-        });
-
-        checkBox6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(VaccineList.this);
-                builder.setIcon(R.mipmap.ic_launcher)
-                        .setMessage("Have you used this vaccine?")
-                        .setCancelable(false)
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-
-                                // Perform Your Task Here--When Yes Is Pressed.
-
-                                    SaveCheckbox(id_v6); //call SaveContact function
-                                    dialog.cancel();
-
-                            }
-                        })
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                // Perform Your Task Here--When No is pressed
-                                dialog.cancel();
-                            }
-                        }).show();
-
-            }
-        });*/
-//        checkBox7.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                AlertDialog.Builder builder = new AlertDialog.Builder(VaccineList.this);
-//                builder.setIcon(R.mipmap.ic_launcher)
-//                        .setMessage("Have you used this vaccine?")
-//                        .setCancelable(false)
-//                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//                            public void onClick(DialogInterface dialog, int which) {
-//
-//                                // Perform Your Task Here--When Yes Is Pressed.
-//
-//                                    SaveCheckbox(v); //call SaveContact function
-//                                    dialog.cancel();
-//
-//                            }
-//                        })
-//                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                // Perform Your Task Here--When No is pressed
-//                                dialog.cancel();
-//                            }
-//                        }).show();
-//
-//            }
-//        });
-//        checkBox8.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                AlertDialog.Builder builder = new AlertDialog.Builder(VaccineList.this);
-//                builder.setIcon(R.mipmap.ic_launcher)
-//                        .setMessage("Have you used this vaccine?")
-//                        .setCancelable(false)
-//                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//                            public void onClick(DialogInterface dialog, int which) {
-//
-//                                // Perform Your Task Here--When Yes Is Pressed.
-//
-//                                    SaveCheckbox(); //call SaveContact function
-//                                    dialog.cancel();
-//
-//                            }
-//                        })
-//                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                // Perform Your Task Here--When No is pressed
-//                                dialog.cancel();
-//                            }
-//                        }).show();
-//
-//            }
-//        });
-//        checkBox9.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                AlertDialog.Builder builder = new AlertDialog.Builder(VaccineList.this);
-//                builder.setIcon(R.mipmap.ic_launcher)
-//                        .setMessage("Have you used this vaccine?")
-//                        .setCancelable(false)
-//                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//                            public void onClick(DialogInterface dialog, int which) {
-//
-//                                // Perform Your Task Here--When Yes Is Pressed.
-//
-//                                    SaveCheckbox(); //call SaveContact function
-//                                    dialog.cancel();
-//
-//                            }
-//                        })
-//                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                // Perform Your Task Here--When No is pressed
-//                                dialog.cancel();
-//                            }
-//                        }).show();
-//
-//            }
-//        });
-//        checkBox10.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                AlertDialog.Builder builder = new AlertDialog.Builder(VaccineList.this);
-//                builder.setIcon(R.mipmap.ic_launcher)
-//                        .setMessage("Have you used this vaccine?")
-//                        .setCancelable(false)
-//                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//                            public void onClick(DialogInterface dialog, int which) {
-//
-//                                // Perform Your Task Here--When Yes Is Pressed.
-//
-//                                    SaveCheckbox(); //call SaveContact function
-//                                    dialog.cancel();
-//
-//                            }
-//                        })
-//                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                // Perform Your Task Here--When No is pressed
-//                                dialog.cancel();
-//                            }
-//                        }).show();
-//
-//            }
-//        });
-//        checkBox11.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                AlertDialog.Builder builder = new AlertDialog.Builder(VaccineList.this);
-//                builder.setIcon(R.mipmap.ic_launcher)
-//                        .setMessage("Have you used this vaccine?")
-//                        .setCancelable(false)
-//                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//                            public void onClick(DialogInterface dialog, int which) {
-//
-//                                // Perform Your Task Here--When Yes Is Pressed.
-//
-//                                    SaveCheckbox(); //call SaveContact function
-//                                    dialog.cancel();
-//
-//                            }
-//                        })
-//                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                // Perform Your Task Here--When No is pressed
-//                                dialog.cancel();
-//                            }
-//                        }).show();
-//
-//            }
-//        });
-//        checkBox12.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                AlertDialog.Builder builder = new AlertDialog.Builder(VaccineList.this);
-//                builder.setIcon(R.mipmap.ic_launcher)
-//                        .setMessage("Have you used this vaccine?")
-//                        .setCancelable(false)
-//                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//                            public void onClick(DialogInterface dialog, int which) {
-//
-//                                // Perform Your Task Here--When Yes Is Pressed.
-//
-//                                    SaveCheckbox(); //call SaveContact function
-//                                    dialog.cancel();
-//
-//                            }
-//                        })
-//                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                // Perform Your Task Here--When No is pressed
-//                                dialog.cancel();
-//                            }
-//                        }).show();
-//
-//            }
-//        });
         }
 
     public void  SaveCheckbox(String id)
@@ -608,127 +321,6 @@ public class VaccineList extends AppCompatActivity {
                 mode="0";
                 vac_id="101";
             }
-        /*if (checkBox2.isChecked())
-        {
-            mode="1";
-            vac_id="102";
-
-        }
-        else
-        {
-            mode="0";
-            vac_id="102";
-        }
-        if (checkBox3.isChecked())
-        {
-            mode="1";
-            vac_id="103";
-
-        }
-        else
-        {
-            mode="0";
-            vac_id="103";
-        }
-        if (checkBox4.isChecked())
-        {
-            mode="1";
-            vac_id="104";
-
-        }
-        else
-        {
-            mode="0";
-            vac_id="104";
-        }
-        if (checkBox5.isChecked())
-        {
-            mode="1";
-            vac_id="105";
-
-        }
-        else
-        {
-            mode="0";
-            vac_id="105";
-        }
-        if (checkBox6.isChecked())
-        {
-            mode="1";
-            vac_id="106";
-
-        }
-        else
-        {
-            mode="0";
-            vac_id="106";
-        }
-        if (checkBox7.isChecked())
-        {
-            mode="1";
-            vac_id="107";
-
-        }
-        else
-        {
-            mode="0";
-            vac_id="107";
-        }
-        if (checkBox8.isChecked())
-        {
-            mode="1";
-            vac_id="108";
-
-        }
-        else
-        {
-            mode="0";
-            vac_id="108";
-        }
-        if (checkBox9.isChecked())
-        {
-            mode="1";
-            vac_id="109";
-
-        }
-        else
-        {
-            mode="0";
-            vac_id="109";
-        }
-        if (checkBox10.isChecked())
-        {
-            mode="1";
-            vac_id="110";
-
-        }
-        else
-        {
-            mode="0";
-            vac_id="110";
-        }
-        if (checkBox11.isChecked())
-        {
-            mode="1";
-            vac_id="111";
-
-        }
-        else
-        {
-            mode="0";
-            vac_id="111";
-        }
-        if (checkBox12.isChecked())
-        {
-            mode="1";
-            vac_id="112";
-
-        }
-        else
-        {
-            mode="0";
-            vac_id="112";
-        }*/
 
             String URL = Constant.ADD_CHECKBOX_URL;
 
@@ -751,7 +343,7 @@ public class VaccineList extends AppCompatActivity {
                                 loading.dismiss();
 
                                 //Starting profile activity
-                                Toast.makeText(VaccineList.this, " Vaccine Schedule Updated!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(VaccineList.this, " Vac Schedule Updated!", Toast.LENGTH_SHORT).show();
 
                             }
 
@@ -760,7 +352,7 @@ public class VaccineList extends AppCompatActivity {
                             else if (response.equals("failure")) {
                                 loading.dismiss();
                                 //Intent intent = new Intent(AddContactsActivity.this, HomeActivity.class);
-                                Toast.makeText(VaccineList.this, " Vaccine Schedule failed to update!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(VaccineList.this, " Vac Schedule failed to update!", Toast.LENGTH_SHORT).show();
                                 //startActivity(intent);
 
                             } else {
@@ -847,7 +439,7 @@ public class VaccineList extends AppCompatActivity {
 
             if (result.length()==0)
             {
-                Toast.makeText(VaccineList.this, "No Vaccine Taken!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(VaccineList.this, "No Vac Taken!", Toast.LENGTH_SHORT).show();
             }
             else {
 
@@ -865,63 +457,7 @@ public class VaccineList extends AppCompatActivity {
                     } else {
                         checkBox1.setChecked(false);
                     }
-          /*          if (vaccine_id.equals("102") && mode.equals("1") && child_id.equals(getBabyId)){
-                        checkBox2.setChecked(true);
-                        id_v2=id;
-                    }else {
-                        checkBox2.setChecked(false);
-                    }
-                    if (vaccine_id.equals("103") && mode.equals("1") && child_id.equals(getBabyId)){
-                        checkBox3.setChecked(true);
-                    }else {
-                        checkBox3.setChecked(false);
-                    }
-                    if (vaccine_id.equals("104") && mode.equals("1") && child_id.equals(getBabyId)){
-                        checkBox4.setChecked(true);
-                    }else {
-                        checkBox4.setChecked(false);
-                    }
-                    if (vaccine_id.equals("105") && mode.equals("1") && child_id.equals(getBabyId)){
-                        checkBox5.setChecked(true);
-                    }else {
-                        checkBox5.setChecked(false);
-                    }
-                    if (vaccine_id.equals("106") && mode.equals("1") && child_id.equals(getBabyId)){
-                        checkBox6.setChecked(true);
-                    }else {
-                        checkBox6.setChecked(false);
-                    }
-                    if (vaccine_id.equals("107") && mode.equals("1") && child_id.equals(getBabyId)){
-                        checkBox7.setChecked(true);
-                    }else {
-                        checkBox7.setChecked(false);
-                    }
-                    if (vaccine_id.equals("108") && mode.equals("1") && child_id.equals(getBabyId)){
-                        checkBox8.setChecked(true);
-                    }else {
-                        checkBox8.setChecked(false);
-                    }
-                    if (vaccine_id.equals("109") && mode.equals("1") && child_id.equals(getBabyId)){
-                        checkBox9.setChecked(true);
-                    }else {
-                        checkBox9.setChecked(false);
-                    }
-                    if (vaccine_id.equals("110") && mode.equals("1") && child_id.equals(getBabyId)){
-                        checkBox10.setChecked(true);
-                    }else {
-                        checkBox10.setChecked(false);
-                    }
-                    if (vaccine_id.equals("111") && mode.equals("1") && child_id.equals(getBabyId)){
-                        checkBox11.setChecked(true);
-                    }else {
-                        checkBox11.setChecked(false);
-                    }
-                    if (vaccine_id.equals("112") && mode.equals("1") && child_id.equals(getBabyId)){
-                        checkBox12.setChecked(true);
-                    }else {
-                        checkBox12.setChecked(false);
-                    }
-                    }*/
+
                 }
             }
         } catch (JSONException e) {

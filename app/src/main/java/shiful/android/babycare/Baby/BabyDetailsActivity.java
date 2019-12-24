@@ -70,7 +70,7 @@ public class BabyDetailsActivity extends AppCompatActivity {
                 calendar.add(Calendar.DATE, 40);
                 String nextDate = dateFormat.format(calendar.getTime());
 
-                Intent intent=new Intent(BabyDetailsActivity.this,VaccineList.class);
+                Intent intent=new Intent(BabyDetailsActivity.this,VaccineSchedule.class);
                 intent.putExtra("fromdate",getDob);
                 intent.putExtra("todate",nextDate);
                 intent.putExtra("babyid",getId);

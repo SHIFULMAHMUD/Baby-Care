@@ -19,7 +19,7 @@ public class Constant {
     //url for view baby
     public static final String VIEW_BABY_URL = MAIN_URL+"/view_baby.php?cell=";
     //url for checkbox
-    public static final String ADD_CHECKBOX_URL = MAIN_URL+"/checkbox.php";
+    public static final String ADD_CHECKBOX_URL = MAIN_URL+"/add_checkbox.php";
     public static final String VIEW_CHECKBOX_URL = MAIN_URL+"/view_checkbox.php?cell=";
     //Keys for server communications
     public static final String KEY_ID = "id";

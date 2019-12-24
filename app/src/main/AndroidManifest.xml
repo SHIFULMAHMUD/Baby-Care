@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Baby.VaccineList"></activity>
+        <activity android:name=".Baby.VaccineSchedule"></activity>
+        <activity android:name=".Baby.VaccineList" />
         <activity android:name=".Vaccine.VaccineDetailsActivity" />
         <activity android:name=".Vaccine.VaccineActivity" />
         <activity android:name=".HealthCenter.HealthCareDetails" />
@@ -25,11 +26,11 @@
         <activity android:name=".Baby.AddBaby" />
         <activity android:name=".User.UserProfile" />
         <activity android:name=".Home.PdfActivity" />
-        <activity android:name=".Home.HomeActivity" />
+        <activity android:name=".Home.SplashActivity" />
         <activity android:name=".User.RegisterActivity" />
         <activity android:name=".User.LoginActivity" />
         <activity
-            android:name=".Home.SplashActivity"
+            android:name=".Home.HomeActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

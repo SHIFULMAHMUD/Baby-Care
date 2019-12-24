@@ -29,6 +29,7 @@ import java.util.HashMap;
 import shiful.android.babycare.Constant;
 import shiful.android.babycare.Home.HomeActivity;
 import shiful.android.babycare.R;
+import shiful.android.babycare.Vaccine.VaccineActivity;
 
 
 public class VaccineActivity extends AppCompatActivity {
@@ -56,9 +57,11 @@ public class VaccineActivity extends AppCompatActivity {
         CustomList=(ListView)findViewById(R.id.vaccine_list);
         //imgNoData=(ImageView)findViewById(R.id.imgNoData);
 
-        /*getSupportActionBar().setHomeButtonEnabled(true); //for back button
+
+/*getSupportActionBar().setHomeButtonEnabled(true); //for back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
         getSupportActionBar().setTitle("Contacts");*/
+
 
 
         //call function to get data
@@ -70,7 +73,7 @@ public class VaccineActivity extends AppCompatActivity {
     private void getData(String text) {
 
         //for showing progress dialog
-        loading = new ProgressDialog(shiful.android.babycare.Vaccine.VaccineActivity.this);
+        loading = new ProgressDialog(VaccineActivity.this);
         loading.setIcon(R.drawable.wait_icon);
         loading.setTitle("Loading");
         loading.setMessage("Please wait....");
@@ -90,11 +93,11 @@ public class VaccineActivity extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
 
                         loading.dismiss();
-                        Toast.makeText(shiful.android.babycare.Vaccine.VaccineActivity.this, "Network Error!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(VaccineActivity.this, "Network Error!", Toast.LENGTH_SHORT).show();
                     }
                 });
 
-        RequestQueue requestQueue = Volley.newRequestQueue(shiful.android.babycare.Vaccine.VaccineActivity.this);
+        RequestQueue requestQueue = Volley.newRequestQueue(VaccineActivity.this);
         requestQueue.add(stringRequest);
 
     }
@@ -113,9 +116,9 @@ public class VaccineActivity extends AppCompatActivity {
 
             if (result.length()==0)
             {
-                Toast.makeText(shiful.android.babycare.Vaccine.VaccineActivity.this, "No Data Available!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(VaccineActivity.this, "No Data Available!", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(shiful.android.babycare.Vaccine.VaccineActivity.this, HomeActivity.class);
+                Intent intent = new Intent(VaccineActivity.this, HomeActivity.class);
 
                 startActivity(intent);
                 //imgNoData.setImageResource(R.drawable.nodata);
@@ -159,7 +162,7 @@ public class VaccineActivity extends AppCompatActivity {
         }
 
         ListAdapter adapter = new SimpleAdapter(
-                shiful.android.babycare.Vaccine.VaccineActivity.this, list, R.layout.vaccine_list_items,
+                VaccineActivity.this, list, R.layout.vaccine_list_items,
                 new String[]{Constant.KEY_VACCINE_NAME},
                 new int[]{R.id.txt_vac_name});
         CustomList.setAdapter(adapter);
@@ -169,7 +172,7 @@ public class VaccineActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
 
-                Intent intent=new Intent(shiful.android.babycare.Vaccine.VaccineActivity.this, VaccineDetailsActivity.class);
+                Intent intent=new Intent(VaccineActivity.this, VaccineDetailsActivity.class);
                 intent.putExtra("name",vacName[position]);
                 intent.putExtra("disease",vacDisease[position]);
                 intent.putExtra("doseno",vacDoseno[position]);
