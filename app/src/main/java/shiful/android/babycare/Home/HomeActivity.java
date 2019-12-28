@@ -17,6 +17,7 @@ import shiful.android.babycare.Baby.VaccineSchedule;
 import shiful.android.babycare.Baby.ViewBaby;
 import shiful.android.babycare.Doctor.DoctorActivity;
 import shiful.android.babycare.HealthCenter.HealthCenterActivity;
+import shiful.android.babycare.NotificationActivity;
 import shiful.android.babycare.R;
 import shiful.android.babycare.User.LoginActivity;
 import shiful.android.babycare.User.UserProfile;
@@ -27,7 +28,7 @@ import shiful.android.babycare.Vaccine.ViewRequest;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    CardView read,user,showbaby,showdoctor,showhealthcenter,showvaccine,viewreq;
+    CardView read,user,showbaby,showdoctor,showhealthcenter,showvaccine,viewreq,notification;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,13 @@ public class HomeActivity extends AppCompatActivity
             }
         });
 
+        notification=findViewById(R.id.b6);
+        notification.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent=new Intent(HomeActivity.this, NotificationActivity.class);
+                startActivity(intent);
+            }
+        });
         user=findViewById(R.id.b1);
         user.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,7 +108,6 @@ public class HomeActivity extends AppCompatActivity
             public void onClick(View v) {
                 Intent intent=new Intent(HomeActivity.this, ViewRequest.class);
                 startActivity(intent);
-                finish();
             }
         });
     }

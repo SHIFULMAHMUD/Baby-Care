@@ -57,7 +57,7 @@ public class ViewRequest extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Vaccine Requests");
+        getSupportActionBar().setTitle("Requested Vaccines");
 
         CustomList=(ListView)findViewById(R.id.vac_req_list);
 
@@ -149,7 +149,7 @@ public class ViewRequest extends AppCompatActivity {
                         status="Pending";
                     }else if (status.equals("1")){
                         status="Taken";
-                    }else {
+                    }else if (status.equals("2")){
                         status="Canceled";
                     }
 

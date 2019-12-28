@@ -291,7 +291,7 @@
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
                         android:textColor="@android:color/white"
-                        android:text="Order Vaccine"
+                        android:text="Ordered Vaccine"
                         android:layout_marginTop="10dp"
                         />
 

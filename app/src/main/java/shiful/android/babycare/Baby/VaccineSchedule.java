@@ -36,6 +36,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+import es.dmoral.toasty.Toasty;
 import shiful.android.babycare.Constant;
 import shiful.android.babycare.R;
 import shiful.android.babycare.Vac;
@@ -47,8 +48,11 @@ public class VaccineSchedule extends AppCompatActivity {
     String getToDate,getFromDate,getBabyId;
     private ProgressDialog loading;
     String mode,getCell,vac_id;
-    String status1,status2;
+    String status;
+    String nextOne,nextTwo,nextThree,nextFour,nextFive,nextSix,nextSeven,nextTen,nextEleven;
 
+    String vaccine_status[]=new String[20];
+    int i;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,7 +81,7 @@ public class VaccineSchedule extends AppCompatActivity {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
         calendar.add(Calendar.DATE, 42);
-        String nextOne = dateFormat.format(calendar.getTime());
+         nextOne = dateFormat.format(calendar.getTime());
 
         String aDate = nextOne;
         SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
@@ -90,7 +94,7 @@ public class VaccineSchedule extends AppCompatActivity {
         Calendar calendar1 = Calendar.getInstance();
         calendar1.setTime(date1);
         calendar1.add(Calendar.DATE, 7);
-        String nextTwo = dateFormat1.format(calendar1.getTime());
+         nextTwo = dateFormat1.format(calendar1.getTime());
 
         String bDate = nextTwo;
         SimpleDateFormat dateFormat2 = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
@@ -116,7 +120,7 @@ public class VaccineSchedule extends AppCompatActivity {
         Calendar calendar10 = Calendar.getInstance();
         calendar10.setTime(date10);
         calendar10.add(Calendar.DATE, 7);
-        String nextTen = dateFormat10.format(calendar10.getTime());
+        nextTen = dateFormat10.format(calendar10.getTime());
 
         String cDate = nextTen;
         SimpleDateFormat dateFormat3 = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
@@ -129,7 +133,7 @@ public class VaccineSchedule extends AppCompatActivity {
         Calendar calendar3 = Calendar.getInstance();
         calendar3.setTime(date3);
         calendar3.add(Calendar.DATE, 30);
-        String nextFour = dateFormat3.format(calendar3.getTime());
+        nextFour = dateFormat3.format(calendar3.getTime());
 
         String nDate = nextFour;
         SimpleDateFormat dateFormat11 = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
@@ -142,7 +146,7 @@ public class VaccineSchedule extends AppCompatActivity {
         Calendar calendar11 = Calendar.getInstance();
         calendar11.setTime(date11);
         calendar11.add(Calendar.DATE, 7);
-        String nextEleven = dateFormat11.format(calendar11.getTime());
+        nextEleven = dateFormat11.format(calendar11.getTime());
 
         String dDate = nextEleven;
         SimpleDateFormat dateFormat4 = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
@@ -155,7 +159,7 @@ public class VaccineSchedule extends AppCompatActivity {
         Calendar calendar4 = Calendar.getInstance();
         calendar4.setTime(date4);
         calendar4.add(Calendar.DATE, 30);
-        String nextFive = dateFormat4.format(calendar4.getTime());
+         nextFive = dateFormat4.format(calendar4.getTime());
 
         String eDate = getFromDate;
         SimpleDateFormat dateFormat5 = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
@@ -168,7 +172,7 @@ public class VaccineSchedule extends AppCompatActivity {
         Calendar calendar5 = Calendar.getInstance();
         calendar5.setTime(date5);
         calendar5.add(Calendar.DATE, 275);
-        String nextSix = dateFormat5.format(calendar5.getTime());
+        nextSix = dateFormat5.format(calendar5.getTime());
 
         String fDate = getFromDate;
         SimpleDateFormat dateFormat6 = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
@@ -181,66 +185,222 @@ public class VaccineSchedule extends AppCompatActivity {
         Calendar calendar6 = Calendar.getInstance();
         calendar6.setTime(date6);
         calendar6.add(Calendar.DATE, 455);
-        String nextSeven = dateFormat6.format(calendar6.getTime());
+        nextSeven = dateFormat6.format(calendar6.getTime());
 
-        getData("");
-        String status="";
-        final ArrayList<Vac> vaccinesList = new ArrayList<>();
-        vaccinesList.add(new Vac("BCG", "" , getFromDate,getToDate,status1));
-        vaccinesList.add(new Vac("Pentavalent", "First Dose" , nextOne,nextTwo,status2));
-        vaccinesList.add(new Vac("PCV", "First Dose" , nextOne,nextTwo,status));
-        vaccinesList.add(new Vac("OPV", "First Dose" , nextOne,nextTwo,status));
-        vaccinesList.add(new Vac("Pentavalent", "Second Dose" , nextThree,nextTen,status));
-        vaccinesList.add(new Vac("PCV", "Second Dose" , nextThree,nextTen,status));
-        vaccinesList.add(new Vac("OPV", "Second Dose" , nextThree,nextTen,status));
-        vaccinesList.add(new Vac("Pentavalent", "Third Dose" , nextFour,nextEleven,status));
-        vaccinesList.add(new Vac("PCV", "Third Dose" , nextFour,nextEleven,status));
-        vaccinesList.add(new Vac("OPV", "Third Dose" , nextFour,nextEleven,status));
-        vaccinesList.add(new Vac("OPV", "Fourth Dose" , nextFive,"As early as possible.",status));
-        vaccinesList.add(new Vac("MR", "" , nextSix,"As early as possible.",status));
-        vaccinesList.add(new Vac("Measles", "" , nextSeven,"As early as possible.",status));
-        mAdapter = new VaccineAdapter(this,vaccinesList);
-        simpleList.setAdapter(mAdapter);
+        getData();
+        /*if (i==1){
+            status="Given";
+        }else {
+            status="Not Given";
+        }*/
+
+//        final ArrayList<Vac> vaccinesList = new ArrayList<>();
+//        vaccinesList.add(new Vac("BCG", "" , getFromDate,getToDate,status));
+//        vaccinesList.add(new Vac("Pentavalent", "First Dose" , nextOne,nextTwo,vaccine_status[0]));
+//        vaccinesList.add(new Vac("PCV", "First Dose" , nextOne,nextTwo,vaccine_status[1]));
+//        vaccinesList.add(new Vac("OPV", "First Dose" , nextOne,nextTwo,vaccine_status[2]));
+//        vaccinesList.add(new Vac("Pentavalent", "Second Dose" , nextThree,nextTen,status));
+//        vaccinesList.add(new Vac("PCV", "Second Dose" , nextThree,nextTen,status));
+//        vaccinesList.add(new Vac("OPV", "Second Dose" , nextThree,nextTen,status));
+//        vaccinesList.add(new Vac("Pentavalent", "Third Dose" , nextFour,nextEleven,status));
+//        vaccinesList.add(new Vac("PCV", "Third Dose" , nextFour,nextEleven,status));
+//        vaccinesList.add(new Vac("OPV", "Third Dose" , nextFour,nextEleven,status));
+//        vaccinesList.add(new Vac("OPV", "Fourth Dose" , nextFive,"As early as possible.",status));
+//        vaccinesList.add(new Vac("MR", "" , nextSix,"As early as possible.",status));
+//        vaccinesList.add(new Vac("Measles", "" , nextSeven,"As early as possible.",status));
+//
+//
+//        mAdapter = new VaccineAdapter(this,vaccinesList);
+//        simpleList.setAdapter(mAdapter);
 
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(final AdapterView<?> parent, final View view, final int position, long id) {
 
+
+
                 AlertDialog.Builder builder = new AlertDialog.Builder(VaccineSchedule.this);
                 builder.setIcon(R.mipmap.ic_launcher)
-                        .setMessage("Have you used this vaccine?")
+                        .setMessage("Have you given this vaccine?")
                         .setCancelable(false)
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Given", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
 
-                                    SaveCheckbox();
-                                    dialog.cancel();
+                                if (position==0)
+                                {
+                                  vac_id="101";
+                                }
+
+                                if (position==1)
+                                {
+                                    vac_id="102";
+                                }
+
+                                if (position==2)
+                                {
+                                    vac_id="103";
+                                }
+
+
+                                if (position==3)
+                                {
+                                    vac_id="104";
+                                }
+
+                                if (position==4)
+                                {
+                                    vac_id="105";
+                                }
+
+                                if (position==5)
+                                {
+                                    vac_id="106";
+                                }
+
+                                if (position==6)
+                                {
+                                    vac_id="107";
+                                }
+
+                                if (position==7)
+                                {
+                                    vac_id="108";
+                                }
+
+                                if (position==8)
+                                {
+                                    vac_id="109";
+                                }
+
+                                if (position==9)
+                                {
+                                    vac_id="110";
+                                }
+
+                                if (position==10)
+                                {
+                                    vac_id="111";
+                                }
+
+
+                                if (position==11)
+                                {
+                                    vac_id="112";
+                                }
+
+
+                                if (position==12)
+                                {
+                                    vac_id="113";
+                                }
+
+
+
+                                SaveCheckbox("1",vac_id);
+                                dialog.cancel();
 
                             }
                         })
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        .setNegativeButton("Not Given", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // Perform Your Task Here--When No is pressed
+
+
+
+                                if (position==0)
+                                {
+                                    vac_id="101";
+                                }
+
+                                if (position==1)
+                                {
+                                    vac_id="102";
+                                }
+
+                                if (position==2)
+                                {
+                                    vac_id="103";
+                                }
+
+
+                                if (position==3)
+                                {
+                                    vac_id="104";
+                                }
+
+                                if (position==4)
+                                {
+                                    vac_id="105";
+                                }
+
+                                if (position==5)
+                                {
+                                    vac_id="106";
+                                }
+
+                                if (position==6)
+                                {
+                                    vac_id="107";
+                                }
+
+                                if (position==7)
+                                {
+                                    vac_id="108";
+                                }
+
+                                if (position==8)
+                                {
+                                    vac_id="109";
+                                }
+
+                                if (position==9)
+                                {
+                                    vac_id="110";
+                                }
+
+                                if (position==10)
+                                {
+                                    vac_id="111";
+                                }
+
+
+                                if (position==11)
+                                {
+                                    vac_id="112";
+                                }
+
+
+                                if (position==12)
+                                {
+                                    vac_id="113";
+                                }
+
+
+
+                                SaveCheckbox("0",vac_id);
+
+
                                 dialog.cancel();
                             }
                         }).show();
                 mAdapter.notifyDataSetChanged();
             }
         });
+    }
 
-
-            }
-
-    public void  SaveCheckbox()
+    public void  SaveCheckbox(final String mode, final String vaccine_id)
     {
         loading = new ProgressDialog(this);
-        loading.setIcon(R.drawable.wait_icon);
-        loading.setTitle("Adding");
+       // loading.setIcon(R.drawable.wait_icon);
+      //  loading.setTitle("Adding");
         loading.setMessage("Please wait....");
         loading.show();
 
-            mode="1";
-            vac_id="101";
+//            status="Given";
+//            mode="1";
+
+
+
 
         String URL = Constant.ADD_CHECKBOX_URL;
 
@@ -261,7 +421,10 @@ public class VaccineSchedule extends AppCompatActivity {
                             loading.dismiss();
 
                             //Starting profile activity
-                            Toast.makeText(VaccineSchedule.this, " Vaccine Schedule Updated!", Toast.LENGTH_SHORT).show();
+                            Toasty.success(VaccineSchedule.this, " Vaccine Schedule Updated!", Toast.LENGTH_SHORT).show();
+
+
+                            getData();
 
                         }
 
@@ -270,7 +433,7 @@ public class VaccineSchedule extends AppCompatActivity {
                         else if (response.equals("failure")) {
                             loading.dismiss();
                             //Intent intent = new Intent(AddContactsActivity.this, HomeActivity.class);
-                            Toast.makeText(VaccineSchedule.this, " Vaccine Schedule failed to update!", Toast.LENGTH_SHORT).show();
+                            Toasty.error(VaccineSchedule.this, " Vaccine Schedule failed to update!", Toast.LENGTH_SHORT).show();
                             //startActivity(intent);
 
                         } else {
@@ -295,7 +458,7 @@ public class VaccineSchedule extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
                 //Adding parameters to request
-                params.put(Constant.KEY_VACCINE_ID,vac_id);
+                params.put(Constant.KEY_VACCINE_ID,vaccine_id);
                 params.put(Constant.KEY_MODE,mode);
                 params.put(Constant.KEY_BABY_ID,getBabyId);
                 params.put(Constant.KEY_USER_CELL,getCell);
@@ -309,7 +472,7 @@ public class VaccineSchedule extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
 
-    private void getData(String text) {
+    private void getData() {
 
         loading=new ProgressDialog(this);
         loading.setMessage("Loading. . . ");
@@ -350,38 +513,206 @@ public class VaccineSchedule extends AppCompatActivity {
             JSONArray result = jsonObject.getJSONArray(Constant.JSON_ARRAY);
 
 
-            if (result.length()==0)
-            {
-                Toast.makeText(VaccineSchedule.this, "No Vaccine Taken!", Toast.LENGTH_SHORT).show();
-            }
-            else {
+
 
                 for (int i = 0; i < result.length(); i++) {
 
                     JSONObject jo = result.getJSONObject(i);
                     String vaccine_id = jo.getString(Constant.KEY_VACCINE_ID);
                     String mode = jo.getString(Constant.KEY_MODE);
-                    String child_id = jo.getString(Constant.KEY_BABY_ID);
+                  //  String child_id = jo.getString(Constant.KEY_BABY_ID);
 
-                    if (vaccine_id.equals("101") && mode.equals("1") && child_id.equals(getBabyId)) {
 
-                        status1="Given";
-                    } else {
+                    //for given
+                    if (vaccine_id.equals("101") && mode.equals("1")) {
 
-                        status1="Not Given";
+                      vaccine_status[0]="Given";
                     }
 
 
-                    if (vaccine_id.equals("102") && mode.equals("1") && child_id.equals(getBabyId)) {
+                    if (vaccine_id.equals("102") && mode.equals("1")) {
 
-                        status2="Given";
-                    } else {
-
-                        status2="Not Given";
+                        vaccine_status[1]="Given";
                     }
 
+
+                    if (vaccine_id.equals("103") && mode.equals("1")) {
+
+                        vaccine_status[2]="Given";
+                    }
+
+
+                    if (vaccine_id.equals("104") && mode.equals("1")) {
+
+                        vaccine_status[3]="Given";
+                    }
+
+
+                    if (vaccine_id.equals("105") && mode.equals("1")) {
+
+                        vaccine_status[4]="Given";
+                    }
+
+
+
+                    if (vaccine_id.equals("106") && mode.equals("1")) {
+
+                        vaccine_status[5]="Given";
+                    }
+
+                    if (vaccine_id.equals("107") && mode.equals("1")) {
+
+                        vaccine_status[6]="Given";
+                    }
+
+                    if (vaccine_id.equals("108") && mode.equals("1")) {
+
+                        vaccine_status[7]="Given";
+                    }
+
+
+                    if (vaccine_id.equals("109") && mode.equals("1")) {
+
+                        vaccine_status[8]="Given";
+                    }
+
+
+                    if (vaccine_id.equals("110") && mode.equals("1")) {
+
+                        vaccine_status[9]="Given";
+                    }
+
+
+                    if (vaccine_id.equals("111") && mode.equals("1")) {
+
+                        vaccine_status[10]="Given";
+                    }
+
+
+                    if (vaccine_id.equals("112") && mode.equals("1")) {
+
+                        vaccine_status[11]="Given";
+                    }
+
+
+                    if (vaccine_id.equals("113") && mode.equals("1")) {
+
+                        vaccine_status[12]="Given";
+                    }
+
+
+
+
+
+                    //for not given
+
+
+
+                    if (vaccine_id.equals("101") && mode.equals("0")) {
+
+                        vaccine_status[0]="Not Given";
+                    }
+
+
+                    if (vaccine_id.equals("102") && mode.equals("0")) {
+
+                        vaccine_status[1]="Not Given";
+                    }
+
+
+                    if (vaccine_id.equals("103") && mode.equals("0")) {
+
+                        vaccine_status[2]="Not Given";
+                    }
+
+
+                    if (vaccine_id.equals("104") && mode.equals("0")) {
+
+                        vaccine_status[3]="Not Given";
+                    }
+
+
+                    if (vaccine_id.equals("105") && mode.equals("0")) {
+
+                        vaccine_status[4]="Not Given";
+                    }
+
+
+                    if (vaccine_id.equals("106") && mode.equals("0")) {
+
+                        vaccine_status[5]="Not Given";
+                    }
+
+                    if (vaccine_id.equals("107") && mode.equals("0")) {
+
+                        vaccine_status[6]="Not Given";
+                    }
+
+                    if (vaccine_id.equals("108") && mode.equals("0")) {
+
+                        vaccine_status[7]="Not Given";
+                    }
+
+
+                    if (vaccine_id.equals("109") && mode.equals("0")) {
+
+                        vaccine_status[8]="Not Given";
+                    }
+
+
+                    if (vaccine_id.equals("110") && mode.equals("0")) {
+
+                        vaccine_status[9]="Not Given";
+                    }
+
+
+                    if (vaccine_id.equals("111") && mode.equals("0")) {
+
+                        vaccine_status[10]="Not Given";
+                    }
+
+
+                    if (vaccine_id.equals("112") && mode.equals("0")) {
+
+                        vaccine_status[11]="Not Given";
+                    }
+
+
+                    if (vaccine_id.equals("113") && mode.equals("0")) {
+
+                        vaccine_status[12]="Not Given";
+                    }
+
+
+
+
+
+//                    Log.d("data",vaccine_status[0]);
                 }
-            }
+
+
+
+                final ArrayList<Vac> vaccinesList = new ArrayList<>();
+                vaccinesList.add(new Vac("BCG", "" , getFromDate,getToDate,vaccine_status[0]));
+                vaccinesList.add(new Vac("Pentavalent", "First Dose" , nextOne,nextTwo,vaccine_status[1]));
+                vaccinesList.add(new Vac("PCV", "First Dose" , nextOne,nextTwo,vaccine_status[2]));
+                vaccinesList.add(new Vac("OPV", "First Dose" , nextOne,nextTwo,vaccine_status[3]));
+                vaccinesList.add(new Vac("Pentavalent", "Second Dose" , nextThree,nextTen,vaccine_status[4]));
+                vaccinesList.add(new Vac("PCV", "Second Dose" , nextThree,nextTen,vaccine_status[5]));
+                vaccinesList.add(new Vac("OPV", "Second Dose" , nextThree,nextTen,vaccine_status[6]));
+                vaccinesList.add(new Vac("Pentavalent", "Third Dose" , nextFour,nextEleven,vaccine_status[7]));
+                vaccinesList.add(new Vac("PCV", "Third Dose" , nextFour,nextEleven,vaccine_status[8]));
+                vaccinesList.add(new Vac("OPV", "Third Dose" , nextFour,nextEleven,vaccine_status[9]));
+                vaccinesList.add(new Vac("OPV", "Fourth Dose" , nextFive,"As early as possible.",vaccine_status[10]));
+                vaccinesList.add(new Vac("MR", "" , nextSix,"As early as possible.",vaccine_status[11]));
+                vaccinesList.add(new Vac("Measles", "" , nextSeven,"As early as possible.",vaccine_status[12]));
+
+
+                mAdapter = new VaccineAdapter(this,vaccinesList);
+                simpleList.setAdapter(mAdapter);
+
+
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
