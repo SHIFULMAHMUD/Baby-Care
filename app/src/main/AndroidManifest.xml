@@ -31,11 +31,11 @@
         <activity android:name=".Baby.AddBaby" />
         <activity android:name=".User.UserProfile" />
         <activity android:name=".Home.PdfActivity" />
-        <activity android:name=".Home.SplashActivity" />
+        <activity android:name=".Home.HomeActivity" />
         <activity android:name=".User.RegisterActivity" />
         <activity android:name=".User.LoginActivity" />
         <activity
-            android:name=".Home.HomeActivity"
+            android:name=".Home.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

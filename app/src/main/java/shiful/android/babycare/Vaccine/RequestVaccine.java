@@ -52,6 +52,10 @@ public class RequestVaccine extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request_vaccine);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Order Vaccine");
+
         vacname=findViewById(R.id.tv_vaccinname);
         parentcell=findViewById(R.id.tv_cell);
         btnSubmit=(Button)findViewById(R.id.btn_submit);

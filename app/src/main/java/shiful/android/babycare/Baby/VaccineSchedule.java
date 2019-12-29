@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -52,11 +53,15 @@ public class VaccineSchedule extends AppCompatActivity {
     String nextOne,nextTwo,nextThree,nextFour,nextFive,nextSix,nextSeven,nextTen,nextEleven;
 
     String vaccine_status[]=new String[20];
-    int i;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vaccine_schedule);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Vaccine Schedule");
 
         simpleList = (ListView) findViewById(R.id.simpleListView);
         //Fetching cell from shared preferences
@@ -382,7 +387,8 @@ public class VaccineSchedule extends AppCompatActivity {
 
                                 dialog.cancel();
                             }
-                        }).show();
+                        })
+                        .setCancelable(true).show();
                 mAdapter.notifyDataSetChanged();
             }
         });

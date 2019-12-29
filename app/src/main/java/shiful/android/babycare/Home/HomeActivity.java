@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import shiful.android.babycare.Baby.AddBaby;
 import shiful.android.babycare.Baby.VaccineSchedule;
 import shiful.android.babycare.Baby.ViewBaby;
 import shiful.android.babycare.Doctor.DoctorActivity;
@@ -151,13 +152,20 @@ public class HomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            Intent intent=new Intent(HomeActivity.this, AddBaby.class);
+            startActivity(intent);
         } else if (id == R.id.nav_gallery) {
+            Intent intent=new Intent(HomeActivity.this, RequestVaccine.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_slideshow) {
+            Intent intent=new Intent(HomeActivity.this, VaccineSchedule.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_manage) {
-
+            Intent intent=new Intent(HomeActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {

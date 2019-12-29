@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".User.UserProfile"
-android:orientation="vertical">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".User.UserProfile">
+
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/appbar"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
@@ -19,130 +21,215 @@ android:orientation="vertical">
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
-<RelativeLayout
+    <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="405dp">
-    <LinearLayout
-        android:background="#854EE6"
-        android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:orientation="vertical">
-        <ImageView
-            android:layout_marginTop="45dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/logo"/>
-        <TextView
-            android:id="@+id/username_tv"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#fff"
-            android:textStyle="bold"
-            android:textSize="21sp"/>
-    </LinearLayout>
-</RelativeLayout>
+    android:layout_height="match_parent"
+        android:layout_below="@+id/appbar">
 
-<LinearLayout
-    android:layout_width="360dp"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_gravity="center"
-    android:layout_marginTop="45dp">
     <LinearLayout
+        android:id="@+id/natural"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
         android:orientation="horizontal"
-        android:paddingLeft="25dp"
+        android:background="@drawable/sea">
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/imageLinear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
-        <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:src="@drawable/mail"
-            android:background="#FC4D16"/>
-        <TextView
-            android:id="@+id/usermail_tv"
-            android:textStyle="bold"
-            android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/male"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#cccccc"/>
+
+
+
+        <customfonts.MyTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:textColor="@android:color/black"
-            />
+            android:id="@+id/username_tv"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:letterSpacing="0.025"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"/>
+
+
     </LinearLayout>
+
     <LinearLayout
-        android:layout_marginTop="25dp"
-        android:orientation="horizontal"
-        android:paddingLeft="25dp"
+        android:layout_below="@+id/natural"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:background="#FC4D16"
-            android:src="@drawable/phone"/>
-        <TextView
-            android:textStyle="bold"
-            android:id="@+id/usercell_tv"
-            android:layout_gravity="center_vertical"
-            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:textColor="@android:color/black"
-            />
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/phone_black"
+                android:layout_gravity="center"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <customfonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone:"
+                    android:textColor="@android:color/black"
+                    android:letterSpacing="0.025"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="14dp" />
+
+                <customfonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/usercell_tv"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="@android:color/black"
+                    android:letterSpacing="0.025"
+                    android:textSize="14dp"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#99A1AC"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/mail_black"
+                android:layout_gravity="center"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <customfonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email:"
+                    android:letterSpacing="0.025"
+                    android:textColor="@android:color/black"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="14dp"
+
+                    />
+
+
+                <customfonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/usermail_tv"
+                    android:layout_marginLeft="30dp"
+                    android:letterSpacing="0.025"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#99A1AC"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/gender_black"
+                android:layout_gravity="center"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <customfonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender:"
+                    android:letterSpacing="0.025"
+                    android:textColor="@android:color/black"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="14dp"
+
+                    />
+
+
+                <customfonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/usergender_tv"
+                    android:layout_marginLeft="30dp"
+                    android:letterSpacing="0.025"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#99A1AC"
+            android:layout_marginTop="20dp"/>
+
     </LinearLayout>
-    <LinearLayout
-        android:layout_marginTop="25dp"
-        android:orientation="horizontal"
-        android:paddingLeft="25dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:background="#FC4D16"
-            android:src="@drawable/gender"/>
-        <TextView
-            android:textStyle="bold"
-            android:id="@+id/usergender_tv"
-            android:layout_gravity="center_vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:textColor="@android:color/black"
-            />
-    </LinearLayout>
-    <!--<LinearLayout
-        android:layout_marginTop="25dp"
-        android:orientation="horizontal"
-        android:paddingLeft="25dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:src="@drawable/ic_forum_black_24dp"/>
-        <TextView
-            android:textStyle="bold"
 
-            android:layout_gravity="center_vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:text="Show all comments"/>
-    </LinearLayout>-->
-</LinearLayout>
-
-<Button
-    android:textColor="#fff"
-    android:layout_marginTop="35dp"
-    android:layout_gravity="center_horizontal"
-    android:layout_width="wrap_content"
-    android:background="@android:color/holo_red_dark"
-    android:layout_height="wrap_content"
-    android:id="@+id/backbtn"
-    android:text="Back"/>
-
-</LinearLayout>
+</RelativeLayout>
+</RelativeLayout>

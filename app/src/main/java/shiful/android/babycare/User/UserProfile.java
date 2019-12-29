@@ -4,6 +4,10 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -11,6 +15,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +35,7 @@ import shiful.android.babycare.R;
 
 public class UserProfile extends AppCompatActivity {
     TextView nametv, emailtv, celltv, gendertv;
+    ImageView profileiv;
     private ProgressDialog loading;
     Button back;
     String getCell;
@@ -51,11 +57,6 @@ public class UserProfile extends AppCompatActivity {
         emailtv=findViewById(R.id.usermail_tv);
         celltv=findViewById(R.id.usercell_tv);
         gendertv=findViewById(R.id.usergender_tv);
-        back=findViewById(R.id.backbtn);
-
-        /*getSupportActionBar().setHomeButtonEnabled(true); //for back button
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
-        getSupportActionBar().setTitle("Contacts");*/
 
         //Fetching cell from shared preferences
         SharedPreferences sharedPreferences;
@@ -68,14 +69,6 @@ public class UserProfile extends AppCompatActivity {
 
         //call function to get data
         getData("");
-
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(UserProfile.this, HomeActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
 

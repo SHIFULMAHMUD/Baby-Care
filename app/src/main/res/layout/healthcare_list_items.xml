@@ -2,18 +2,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:id="@+id/relative_list"
-    android:background="#B830CF"
+    android:background="#A01B48"
+    android:padding="5dp"
     android:layout_height="wrap_content">
 
     <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:padding="5dp"
         android:id="@+id/list_icon"
         android:layout_centerInParent="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:src="@drawable/hospital"/>
+        android:src="@drawable/medical"/>
 
     <TextView
         android:id="@+id/txt_hc_name"
@@ -22,11 +23,12 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="16dp"
         android:layout_toRightOf="@id/list_icon"
-        android:paddingTop="10dp"
+        android:paddingTop="7dp"
         android:textColor="#fff"
+        android:textStyle="bold"
         android:hint="Md. Mizi Mahbub"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+        android:textSize="16sp"
+         />
 
     <TextView
         android:id="@+id/txt_hc_cell"
@@ -34,11 +36,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_toRightOf="@id/list_icon"
-        android:paddingTop="10dp"
+        android:paddingTop="5dp"
         android:layout_below="@+id/txt_hc_name"
         android:textColor="#fff"
         android:hint="01292939333"
-        android:textSize="18dp"
-        android:textStyle="bold" />
+        android:textSize="15sp"
+        />
 
 </RelativeLayout>

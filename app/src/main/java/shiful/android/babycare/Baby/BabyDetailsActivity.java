@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.text.ParseException;
@@ -20,6 +21,7 @@ public class BabyDetailsActivity extends AppCompatActivity {
     TextView txtName, txtGender, txtBg,txtDob,txtBp;
     String getId,getName, getGender, getBg,getDob,getBp;
     Button vacList;
+    ImageView genderiv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +30,7 @@ public class BabyDetailsActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Baby Details");
-
+        genderiv=findViewById(R.id.gender_imageview);
         txtName = findViewById(R.id.baby_name);
         txtGender = findViewById(R.id.baby_gender);
         txtBg = findViewById(R.id.blood_group);
@@ -45,7 +47,11 @@ public class BabyDetailsActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true); //for back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
         getSupportActionBar().setTitle("Contact Details");//for actionbar title*/
-
+        if (getGender.equals("Male")) {
+            genderiv.setBackgroundResource(R.drawable.sexmale);
+        }else{
+            genderiv.setBackgroundResource(R.drawable.sexfemale);
+        }
 
         txtName.setText(getName);
         txtGender.setText(getGender);
