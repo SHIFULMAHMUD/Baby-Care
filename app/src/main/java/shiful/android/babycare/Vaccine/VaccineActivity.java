@@ -3,8 +3,8 @@ package shiful.android.babycare.Vaccine;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -29,7 +29,6 @@ import java.util.HashMap;
 import shiful.android.babycare.Constant;
 import shiful.android.babycare.Home.HomeActivity;
 import shiful.android.babycare.R;
-import shiful.android.babycare.Vaccine.VaccineActivity;
 
 
 public class VaccineActivity extends AppCompatActivity {

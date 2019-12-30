@@ -1,10 +1,12 @@
 package shiful.android.babycare.User;
 
+        import android.app.AlertDialog;
         import android.app.ProgressDialog;
+        import android.content.DialogInterface;
         import android.content.Intent;
         import android.os.Bundle;
-        import android.support.v7.app.AppCompatActivity;
-        import android.support.v7.widget.Toolbar;
+        import androidx.appcompat.app.AppCompatActivity;
+        import androidx.appcompat.widget.Toolbar;
         import android.util.Log;
         import android.view.View;
         import android.view.WindowManager;
@@ -71,6 +73,54 @@ public class RegisterActivity extends AppCompatActivity {
 
             }
         });
+
+
+        //For choosing account type and open alert dialog
+        etxtGender.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final String[] genderList = {"Male", "Female"};
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
+                builder.setTitle("SELECT GENDER");
+                builder.setIcon(R.drawable.gender);
+
+
+                builder.setCancelable(false);
+                builder.setItems(genderList, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int position) {
+                        switch (position) {
+                            case 0:
+                                etxtGender.setText(genderList[position]);
+                                break;
+
+                            case 1:
+                                etxtGender.setText(genderList[position]);
+                                break;
+
+
+                        }
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int position) {
+                        dialog.dismiss();
+                    }
+                });
+
+
+                AlertDialog accountTypeDialog = builder.create();
+
+                accountTypeDialog.show();
+            }
+
+        });
+
+
     }
 
 
@@ -90,15 +140,15 @@ public class RegisterActivity extends AppCompatActivity {
             etxtName.setError("Please enter name !");
             requestFocus(etxtName);
         }
-        else if (cell.isEmpty()) {
+        else if (cell.length()!=11) {
 
-            etxtCell.setError("Please enter cell !");
+            etxtCell.setError("Please enter valid cell !");
             requestFocus(etxtCell);
 
         }
-        else if (email.isEmpty()) {
+        else if (email.isEmpty() || email.contains("@") || email.contains(".")) {
 
-            etxtEmail.setError("Please enter email !");
+            etxtEmail.setError("Please enter valid email !");
             requestFocus(etxtEmail);
 
         }

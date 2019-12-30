@@ -1,9 +1,9 @@
 package shiful.android.babycare.Adapter;
 
 import android.content.Context;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +13,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import shiful.android.babycare.Adapter.Vac;
 import shiful.android.babycare.R;
 
 public class VaccineAdapter extends ArrayAdapter<Vac> {

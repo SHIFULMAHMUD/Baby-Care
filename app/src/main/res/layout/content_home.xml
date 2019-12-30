@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:clickable="true"
                 android:focusable="true"
                 android:id="@+id/b1"
@@ -50,8 +50,8 @@
                         android:textColor="@android:color/white"/>
 
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_alignParentEnd="true"
@@ -81,7 +81,7 @@
                         />
 
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </RelativeLayout>
         <RelativeLayout
@@ -92,7 +92,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_alignParentStart="true"
@@ -122,8 +122,8 @@
                         />
 
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_width="130dp"
@@ -153,7 +153,7 @@
                         />
 
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </RelativeLayout>
         <RelativeLayout
@@ -164,7 +164,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_alignParentStart="true"
@@ -194,8 +194,8 @@
                         />
 
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_alignParentEnd="true"
@@ -214,28 +214,28 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:padding="5dp"
-                        android:src="@drawable/bell"/>
+                        android:src="@drawable/medical"/>
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
+                        android:gravity="center"
                         android:layout_marginTop="5dp"
                         android:textColor="@android:color/white"
-                        android:text="Notificatons"/>
+                        android:text="Nearest Health Center"/>
 
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </RelativeLayout>
         <RelativeLayout
             android:clipToPadding="false"
             android:gravity="center"
-            android:id="@+id/ll4"
             android:layout_below="@id/ll3"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_width="130dp"
@@ -265,8 +265,8 @@
                         />
 
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_alignParentEnd="true"
@@ -296,7 +296,7 @@
                         />
 
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </RelativeLayout>
     </RelativeLayout>
