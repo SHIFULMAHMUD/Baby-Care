@@ -20,7 +20,7 @@ public class HealthCareDetails extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Health Center Details");
+        getSupportActionBar().setTitle("HEALTH CENTER DETAILS");
 
         txtName = findViewById(R.id.hc_name);
         txtCell = findViewById(R.id.hc_phone);

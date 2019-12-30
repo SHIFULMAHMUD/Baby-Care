@@ -29,7 +29,7 @@ public class BabyDetailsActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Baby Details");
+        getSupportActionBar().setTitle("BABY DETAILS");
         genderiv=findViewById(R.id.gender_imageview);
         txtName = findViewById(R.id.baby_name);
         txtGender = findViewById(R.id.baby_gender);

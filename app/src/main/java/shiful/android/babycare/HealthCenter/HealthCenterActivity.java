@@ -26,6 +26,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import es.dmoral.toasty.Toasty;
 import shiful.android.babycare.Constant;
 import shiful.android.babycare.Home.HomeActivity;
 import shiful.android.babycare.R;
@@ -48,7 +49,7 @@ public class HealthCenterActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Health Center");
+        getSupportActionBar().setTitle("HEALTH CENTER");
 
         CustomList=(ListView)findViewById(R.id.hc_list);
         //imgNoData=(ImageView)findViewById(R.id.imgNoData);
@@ -87,7 +88,7 @@ public class HealthCenterActivity extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
 
                         loading.dismiss();
-                        Toast.makeText(shiful.android.babycare.HealthCenter.HealthCenterActivity.this, "Network Error!", Toast.LENGTH_SHORT).show();
+                        Toasty.error(shiful.android.babycare.HealthCenter.HealthCenterActivity.this, "Network Error!", Toast.LENGTH_LONG).show();
                     }
                 });
 
@@ -110,7 +111,7 @@ public class HealthCenterActivity extends AppCompatActivity {
 
             if (result.length()==0)
             {
-                Toast.makeText(shiful.android.babycare.HealthCenter.HealthCenterActivity.this, "No Data Available!", Toast.LENGTH_SHORT).show();
+                Toasty.info(shiful.android.babycare.HealthCenter.HealthCenterActivity.this, "No Data Available!", Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent(shiful.android.babycare.HealthCenter.HealthCenterActivity.this, HomeActivity.class);
 

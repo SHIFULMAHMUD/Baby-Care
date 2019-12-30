@@ -23,6 +23,7 @@ package shiful.android.babycare.User;
         import java.util.HashMap;
         import java.util.Map;
 
+        import es.dmoral.toasty.Toasty;
         import shiful.android.babycare.Constant;
         import shiful.android.babycare.R;
 
@@ -41,7 +42,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Baby Care");
+        getSupportActionBar().setTitle("BABY CARE");
 
         //Assigning java object to xml edit text fields
         etxtName=(EditText)findViewById(R.id.et_username);
@@ -133,18 +134,18 @@ public class RegisterActivity extends AppCompatActivity {
                     if (response.equals("success")) {
                         loading.dismiss();
                         Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                        Toast.makeText(RegisterActivity.this, "Sign up successful", Toast.LENGTH_SHORT).show();
+                        Toasty.success(RegisterActivity.this, "Sign up successful", Toast.LENGTH_LONG).show();
                         startActivity(intent);
                     } else if (response.equals("exists")) {
 
-                        Toast.makeText(RegisterActivity.this, "User already exists!", Toast.LENGTH_SHORT).show();
+                        Toasty.warning(RegisterActivity.this, "User already exists!", Toast.LENGTH_LONG).show();
                         loading.dismiss();
 
                     }
 
                     else if (response.equals("failure")) {
 
-                        Toast.makeText(RegisterActivity.this, "Registration Failed!", Toast.LENGTH_SHORT).show();
+                        Toasty.error(RegisterActivity.this, "Registration Failed!", Toast.LENGTH_LONG).show();
                         loading.dismiss();
 
                     }
@@ -154,7 +155,7 @@ public class RegisterActivity extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(VolleyError error) {
 
-                            Toast.makeText(RegisterActivity.this, "No Internet Connection or \nThere is an error !!!", Toast.LENGTH_LONG).show();
+                            Toasty.error(RegisterActivity.this, "No Internet Connection or \nThere is an error !!!", Toast.LENGTH_LONG).show();
                             loading.dismiss();
                         }
                     }

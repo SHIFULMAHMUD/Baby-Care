@@ -36,6 +36,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+import es.dmoral.toasty.Toasty;
 import shiful.android.babycare.Baby.ViewBaby;
 import shiful.android.babycare.Constant;
 import shiful.android.babycare.R;
@@ -54,7 +55,7 @@ public class RequestVaccine extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Order Vaccine");
+        getSupportActionBar().setTitle("ORDER VACCINE");
 
         vacname=findViewById(R.id.tv_vaccinname);
         parentcell=findViewById(R.id.tv_cell);
@@ -111,15 +112,15 @@ public class RequestVaccine extends AppCompatActivity {
 
         if (baby_name.isEmpty())
         {
-            Toast.makeText(this, "Baby Name Can't Be Empty", Toast.LENGTH_SHORT).show();
+            Toasty.warning(this, "Baby Name can't be empty !", Toast.LENGTH_SHORT).show();
         }
         else if (parent_name.isEmpty())
         {
-            Toast.makeText(this, "Guardian Name Can't Be Empty", Toast.LENGTH_SHORT).show();
+            Toasty.warning(this, "Guardian Name can't be empty !", Toast.LENGTH_SHORT).show();
         }
         else if(parent_address.isEmpty())
         {
-            Toast.makeText(this, "Address Can't Be Empty", Toast.LENGTH_SHORT).show();
+            Toasty.warning(this, "Address can't be empty !", Toast.LENGTH_SHORT).show();
         }
 
         else {
@@ -149,7 +150,7 @@ public class RequestVaccine extends AppCompatActivity {
 
                                 loading.dismiss();
                                 //Starting profile activity
-                                Toast.makeText(shiful.android.babycare.Vaccine.RequestVaccine.this, "Successfully Requested!", Toast.LENGTH_SHORT).show();
+                                Toasty.success(RequestVaccine.this, "Successfully Requested!", Toast.LENGTH_LONG).show();
 
                             }
 
@@ -161,13 +162,13 @@ public class RequestVaccine extends AppCompatActivity {
                                 //Starting profile activity
 
                                 //Intent intent = new Intent(AddContactsActivity.this, HomeActivity.class);
-                                Toast.makeText(shiful.android.babycare.Vaccine.RequestVaccine.this, "Request Failed!", Toast.LENGTH_SHORT).show();
+                                Toasty.error(RequestVaccine.this, "Request Failed!", Toast.LENGTH_LONG).show();
                                 //startActivity(intent);
 
                             } else {
 
                                 loading.dismiss();
-                                Toast.makeText(shiful.android.babycare.Vaccine.RequestVaccine.this, "Network Error", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RequestVaccine.this, "Network Error", Toast.LENGTH_SHORT).show();
 
                             }
 

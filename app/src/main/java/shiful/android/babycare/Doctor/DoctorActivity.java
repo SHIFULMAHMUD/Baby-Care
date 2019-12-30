@@ -26,6 +26,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import es.dmoral.toasty.Toasty;
 import shiful.android.babycare.Constant;
 import shiful.android.babycare.Home.HomeActivity;
 import shiful.android.babycare.R;
@@ -48,7 +49,7 @@ public class DoctorActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Child Specialist");
+        getSupportActionBar().setTitle("CHILD SPECIALIST");
 
         CustomList=(ListView)findViewById(R.id.doctor_list);
         //imgNoData=(ImageView)findViewById(R.id.imgNoData);
@@ -87,7 +88,7 @@ public class DoctorActivity extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
 
                         loading.dismiss();
-                        Toast.makeText(DoctorActivity.this, "Network Error!", Toast.LENGTH_SHORT).show();
+                        Toasty.error(DoctorActivity.this, "Network Error!", Toast.LENGTH_LONG).show();
                     }
                 });
 
@@ -110,7 +111,7 @@ public class DoctorActivity extends AppCompatActivity {
 
             if (result.length()==0)
             {
-                Toast.makeText(DoctorActivity.this, "No Data Available!", Toast.LENGTH_SHORT).show();
+                Toasty.info(DoctorActivity.this, "No Data Available!", Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent(DoctorActivity.this, HomeActivity.class);
 

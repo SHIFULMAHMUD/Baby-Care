@@ -35,6 +35,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+import es.dmoral.toasty.Toasty;
 import shiful.android.babycare.Constant;
 import shiful.android.babycare.R;
 
@@ -54,7 +55,7 @@ public class AddBaby extends AppCompatActivity  implements
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Baby Care");
+        getSupportActionBar().setTitle("BABY CARE");
 
         //Getting the instance of Spinner and applying OnItemSelectedListener on it
         Spinner spin = (Spinner) findViewById(R.id.sp_gender);
@@ -155,24 +156,24 @@ public class AddBaby extends AppCompatActivity  implements
 
         if (baby_name.isEmpty())
         {
-            Toast.makeText(this, "Name Can't Be Empty", Toast.LENGTH_SHORT).show();
+            Toasty.error(this, "Name can't be empty", Toast.LENGTH_SHORT).show();
         }
         else if (baby_gender.isEmpty())
         {
-            Toast.makeText(this, "Gender Can't Empty", Toast.LENGTH_SHORT).show();
+            Toasty.error(this, "Gender can't be empty", Toast.LENGTH_SHORT).show();
         }
 
         else if(blood_group.isEmpty())
         {
-            Toast.makeText(this, "Blood Group Can't Empty", Toast.LENGTH_SHORT).show();
+            Toasty.error(this, "Blood Group can't empty", Toast.LENGTH_SHORT).show();
         }
         else if(date_of_birth.isEmpty())
         {
-            Toast.makeText(this, "Date of Birth Can't Empty", Toast.LENGTH_SHORT).show();
+            Toasty.error(this, "Date of Birth can't empty", Toast.LENGTH_SHORT).show();
         }
         else if(birth_place.isEmpty())
         {
-            Toast.makeText(this, "Birth Place Can't Empty", Toast.LENGTH_SHORT).show();
+            Toasty.error(this, "Birth Place can't empty", Toast.LENGTH_SHORT).show();
         }
 
         else {
@@ -204,7 +205,7 @@ public class AddBaby extends AppCompatActivity  implements
                                 //Starting profile activity
 
                                 Intent intent = new Intent(AddBaby.this, ViewBaby.class);
-                                Toast.makeText(AddBaby.this, " Successfully Added!", Toast.LENGTH_SHORT).show();
+                                Toasty.success(AddBaby.this, " Successfully Added!", Toast.LENGTH_LONG).show();
                                 startActivity(intent);
 
                             }
@@ -217,13 +218,13 @@ public class AddBaby extends AppCompatActivity  implements
                                 //Starting profile activity
 
                                 //Intent intent = new Intent(AddContactsActivity.this, HomeActivity.class);
-                                Toast.makeText(AddBaby.this, " Adding failed!", Toast.LENGTH_SHORT).show();
+                                Toasty.error(AddBaby.this, " Adding Failed!", Toast.LENGTH_LONG).show();
                                 //startActivity(intent);
 
                             } else {
 
                                 loading.dismiss();
-                                Toast.makeText(AddBaby.this, "Network Error", Toast.LENGTH_SHORT).show();
+                                Toasty.error(AddBaby.this, "Network Error", Toast.LENGTH_LONG).show();
 
                             }
 
@@ -235,7 +236,7 @@ public class AddBaby extends AppCompatActivity  implements
                         public void onErrorResponse(VolleyError error) {
                             //You can handle error here if you want
 
-                            Toast.makeText(AddBaby.this, "No Internet Connection or \nThere is an error !!!", Toast.LENGTH_LONG).show();
+                            Toasty.error(AddBaby.this, "No Internet Connection or \nThere is an error !!!", Toast.LENGTH_LONG).show();
                             loading.dismiss();
                         }
                     }) {

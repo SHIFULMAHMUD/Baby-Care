@@ -18,7 +18,7 @@ import shiful.android.babycare.Baby.VaccineSchedule;
 import shiful.android.babycare.Baby.ViewBaby;
 import shiful.android.babycare.Doctor.DoctorActivity;
 import shiful.android.babycare.HealthCenter.HealthCenterActivity;
-import shiful.android.babycare.NotificationActivity;
+import shiful.android.babycare.Notification.NotificationActivity;
 import shiful.android.babycare.R;
 import shiful.android.babycare.User.LoginActivity;
 import shiful.android.babycare.User.UserProfile;

@@ -24,6 +24,7 @@ package shiful.android.babycare.User;
         import java.util.HashMap;
         import java.util.Map;
 
+        import es.dmoral.toasty.Toasty;
         import shiful.android.babycare.Constant;
         import shiful.android.babycare.Home.HomeActivity;
         import shiful.android.babycare.R;
@@ -43,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Baby Care");
+        getSupportActionBar().setTitle("BABY CARE");
 
         //Link up to java object to xml Button id
         btnSignUp=(Button)findViewById(R.id.btn_gotoRegister);
@@ -132,20 +133,20 @@ public class LoginActivity extends AppCompatActivity {
                                 //Starting Home activity
                                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                                 startActivity(intent);
-                                Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                                Toasty.success(LoginActivity.this, "Login Successful", Toast.LENGTH_LONG).show();
 
                             }
                             else if(response.equals("failure")) {
                                 //If the server response is not success
                                 //Displaying an error message on toast
-                                Toast.makeText(LoginActivity.this, "Invalid Login", Toast.LENGTH_LONG).show();
+                                Toasty.warning(LoginActivity.this, "Invalid Login", Toast.LENGTH_LONG).show();
                                 loading.dismiss();
                             }
 
                             else {
                                 //If the server response is not success
                                 //Displaying an error message on toast
-                                Toast.makeText(LoginActivity.this, "Invalid user cell or password", Toast.LENGTH_LONG).show();
+                                Toasty.warning(LoginActivity.this, "Invalid user cell or password", Toast.LENGTH_LONG).show();
                                 loading.dismiss();
                             }
                         }
@@ -156,7 +157,7 @@ public class LoginActivity extends AppCompatActivity {
                         public void onErrorResponse(VolleyError error) {
                             //You can handle error here if you want
 
-                            Toast.makeText(LoginActivity.this, "There is an error !!!", Toast.LENGTH_LONG).show();
+                            Toasty.error(LoginActivity.this, "There is an error !!!", Toast.LENGTH_LONG).show();
                             loading.dismiss();
                         }
                     }) {

@@ -29,6 +29,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import es.dmoral.toasty.Toasty;
 import shiful.android.babycare.Constant;
 import shiful.android.babycare.Home.HomeActivity;
 import shiful.android.babycare.R;
@@ -52,7 +53,7 @@ public class UserProfile extends AppCompatActivity {
         setContentView(R.layout.activity_user_profile);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("User Profile");
+        getSupportActionBar().setTitle("USER PROFILE");
         nametv=findViewById(R.id.username_tv);
         emailtv=findViewById(R.id.usermail_tv);
         celltv=findViewById(R.id.usercell_tv);
@@ -96,7 +97,7 @@ public class UserProfile extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
 
                         loading.dismiss();
-                        Toast.makeText(UserProfile.this, "Network Error!", Toast.LENGTH_SHORT).show();
+                        Toasty.error(UserProfile.this, "Network Error!", Toast.LENGTH_LONG).show();
                     }
                 });
 
@@ -117,7 +118,7 @@ public class UserProfile extends AppCompatActivity {
 
             if (result.length()==0)
             {
-                Toast.makeText(UserProfile.this, "No Data Available!", Toast.LENGTH_SHORT).show();
+                Toasty.info(UserProfile.this, "No Data Available!", Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent(UserProfile.this, HomeActivity.class);
 

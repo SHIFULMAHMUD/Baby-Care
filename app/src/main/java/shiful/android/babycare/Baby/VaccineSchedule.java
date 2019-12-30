@@ -11,9 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.CheckBox;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -40,8 +38,8 @@ import java.util.Map;
 import es.dmoral.toasty.Toasty;
 import shiful.android.babycare.Constant;
 import shiful.android.babycare.R;
-import shiful.android.babycare.Vac;
-import shiful.android.babycare.VaccineAdapter;
+import shiful.android.babycare.Adapter.Vac;
+import shiful.android.babycare.Adapter.VaccineAdapter;
 
 public class VaccineSchedule extends AppCompatActivity {
     ListView simpleList;
@@ -61,7 +59,7 @@ public class VaccineSchedule extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Vaccine Schedule");
+        getSupportActionBar().setTitle("VACCINE SCHEDULE");
 
         simpleList = (ListView) findViewById(R.id.simpleListView);
         //Fetching cell from shared preferences
@@ -193,30 +191,6 @@ public class VaccineSchedule extends AppCompatActivity {
         nextSeven = dateFormat6.format(calendar6.getTime());
 
         getData();
-        /*if (i==1){
-            status="Given";
-        }else {
-            status="Not Given";
-        }*/
-
-//        final ArrayList<Vac> vaccinesList = new ArrayList<>();
-//        vaccinesList.add(new Vac("BCG", "" , getFromDate,getToDate,status));
-//        vaccinesList.add(new Vac("Pentavalent", "First Dose" , nextOne,nextTwo,vaccine_status[0]));
-//        vaccinesList.add(new Vac("PCV", "First Dose" , nextOne,nextTwo,vaccine_status[1]));
-//        vaccinesList.add(new Vac("OPV", "First Dose" , nextOne,nextTwo,vaccine_status[2]));
-//        vaccinesList.add(new Vac("Pentavalent", "Second Dose" , nextThree,nextTen,status));
-//        vaccinesList.add(new Vac("PCV", "Second Dose" , nextThree,nextTen,status));
-//        vaccinesList.add(new Vac("OPV", "Second Dose" , nextThree,nextTen,status));
-//        vaccinesList.add(new Vac("Pentavalent", "Third Dose" , nextFour,nextEleven,status));
-//        vaccinesList.add(new Vac("PCV", "Third Dose" , nextFour,nextEleven,status));
-//        vaccinesList.add(new Vac("OPV", "Third Dose" , nextFour,nextEleven,status));
-//        vaccinesList.add(new Vac("OPV", "Fourth Dose" , nextFive,"As early as possible.",status));
-//        vaccinesList.add(new Vac("MR", "" , nextSix,"As early as possible.",status));
-//        vaccinesList.add(new Vac("Measles", "" , nextSeven,"As early as possible.",status));
-//
-//
-//        mAdapter = new VaccineAdapter(this,vaccinesList);
-//        simpleList.setAdapter(mAdapter);
 
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -427,7 +401,7 @@ public class VaccineSchedule extends AppCompatActivity {
                             loading.dismiss();
 
                             //Starting profile activity
-                            Toasty.success(VaccineSchedule.this, " Vaccine Schedule Updated!", Toast.LENGTH_SHORT).show();
+                            Toasty.success(VaccineSchedule.this, " Vaccine Schedule Updated!", Toast.LENGTH_LONG).show();
 
 
                             getData();
@@ -439,12 +413,12 @@ public class VaccineSchedule extends AppCompatActivity {
                         else if (response.equals("failure")) {
                             loading.dismiss();
                             //Intent intent = new Intent(AddContactsActivity.this, HomeActivity.class);
-                            Toasty.error(VaccineSchedule.this, " Vaccine Schedule failed to update!", Toast.LENGTH_SHORT).show();
+                            Toasty.error(VaccineSchedule.this, " Vaccine Schedule Failed to Update!", Toast.LENGTH_LONG).show();
                             //startActivity(intent);
 
                         } else {
                             loading.dismiss();
-                            Toast.makeText(VaccineSchedule.this, "Network Error", Toast.LENGTH_SHORT).show();
+                            Toasty.error(VaccineSchedule.this, "Network Error", Toast.LENGTH_LONG).show();
 
                         }
 
@@ -455,7 +429,7 @@ public class VaccineSchedule extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         //You can handle error here if you want
-                        Toast.makeText(VaccineSchedule.this, "No Internet Connection or \nThere is an error !!!", Toast.LENGTH_LONG).show();
+                        Toasty.error(VaccineSchedule.this, "No Internet Connection or \nThere is an error !!!", Toast.LENGTH_LONG).show();
                         loading.dismiss();
                     }
                 }) {
@@ -500,7 +474,7 @@ public class VaccineSchedule extends AppCompatActivity {
 
                         loading.dismiss();
 
-                        Toast.makeText(VaccineSchedule.this, "Network Error!", Toast.LENGTH_SHORT).show();
+                        Toasty.error(VaccineSchedule.this, "Network Error!", Toast.LENGTH_SHORT).show();
                     }
                 });
 

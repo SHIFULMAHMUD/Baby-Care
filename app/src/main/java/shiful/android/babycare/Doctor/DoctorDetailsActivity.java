@@ -18,7 +18,7 @@ public class DoctorDetailsActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Child Specialist");
+        getSupportActionBar().setTitle("CHILD SPECIALIST");
 
         txtName = findViewById(R.id.doc_name);
         txtCell = findViewById(R.id.doc_phone);

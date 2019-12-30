@@ -15,11 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".NotificationActivity"></activity>
+        <activity android:name=".Notification.NotificationActivity"></activity>
         <activity android:name=".Vaccine.ViewRequest" />
         <activity android:name=".Vaccine.RequestVaccine" />
         <activity android:name=".Baby.VaccineSchedule" />
-        <activity android:name=".Baby.VaccineList" />
         <activity android:name=".Vaccine.VaccineDetailsActivity" />
         <activity android:name=".Vaccine.VaccineActivity" />
         <activity android:name=".HealthCenter.HealthCareDetails" />

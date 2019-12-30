@@ -1,4 +1,4 @@
-package shiful.android.babycare;
+package shiful.android.babycare.Adapter;
 
 public class Vac {
     private String mVaccineName;

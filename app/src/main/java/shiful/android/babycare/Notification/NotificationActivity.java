@@ -1,7 +1,9 @@
-package shiful.android.babycare;
+package shiful.android.babycare.Notification;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import shiful.android.babycare.R;
 
 public class NotificationActivity extends AppCompatActivity {
 
