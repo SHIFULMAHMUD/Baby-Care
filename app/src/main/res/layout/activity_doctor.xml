@@ -4,7 +4,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".Doctor.DoctorActivity">
+tools:context=".doctor.DoctorActivity">
 
 <LinearLayout
     android:id="@+id/layout"
@@ -24,11 +24,38 @@ tools:context=".Doctor.DoctorActivity">
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txt_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Search Name or Location. . . "
+            android:textColor="@color/colorPrimaryDark"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimaryDark"
+            android:text="Search" />
+    </LinearLayout>
     <ListView
         android:id="@+id/doctor_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="#fff"
+        android:background="#802408"
+        android:listSelector="#6C0681"
         android:dividerHeight="3dp" />
 </LinearLayout>
 

@@ -4,7 +4,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".Vaccine.VaccineActivity">
+tools:context=".vaccine.VaccineActivity">
 
 <LinearLayout
     android:id="@+id/layout"
@@ -28,6 +28,7 @@ tools:context=".Vaccine.VaccineActivity">
         android:id="@+id/vaccine_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="3dp"
         android:divider="#fff"
         android:dividerHeight="3dp" />
 </LinearLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Vaccine.RequestVaccine">
+    tools:context=".vaccine.RequestVaccine">
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -98,9 +98,10 @@
                     android:layout_alignParentTop="true"
                     android:layout_toRightOf="@+id/iv_baby"
                     android:inputType="text"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
                     android:background="#bcbbbb"
                     android:hint="Vaccine Name"
-                    android:paddingLeft="20dp"
                     android:textSize="15sp" />
 
             </RelativeLayout>
@@ -125,10 +126,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:id="@+id/et_childname"
+                    android:hint="Baby Name"
+                    android:gravity="center"
                     android:layout_alignParentTop="true"
+                    android:textColor="@android:color/black"
                     android:layout_toRightOf="@+id/iv_gender"
                     android:background="#bcbbbb"
-                    android:paddingLeft="15dp"
                     android:textSize="15sp" />
 
 
@@ -159,9 +162,10 @@
                     android:layout_toRightOf="@+id/iv_bg"
                     android:background="#bcbbbb"
                     android:hint="Parent Name"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
                     android:id="@+id/et_parentname"
                     android:inputType="text"
-                    android:paddingLeft="20dp"
                     android:textSize="15sp" />
 
             </RelativeLayout>
@@ -191,11 +195,12 @@
                     android:layout_toRightOf="@+id/iv_dob"
                     android:background="#bcbbbb"
                     android:hint="Phone"
+                    android:textColor="@android:color/black"
                     android:id="@+id/tv_cell"
-                    android:paddingLeft="20dp"
                     android:clickable="true"
                     android:editable="false"
                     android:focusable="false"
+                    android:gravity="center"
                     android:textSize="15sp" />
 
             </RelativeLayout>
@@ -225,9 +230,10 @@
                     android:layout_toRightOf="@+id/iv_bp"
                     android:background="#bcbbbb"
                     android:hint="Address"
+                    android:textColor="@android:color/black"
                     android:id="@+id/et_address"
+                    android:gravity="center"
                     android:inputType="text"
-                    android:paddingLeft="20dp"
                     android:textSize="15sp" />
 
             </RelativeLayout>

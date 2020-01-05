@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "shiful.android.babycare"
-        minSdkVersion 17
+        minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -35,10 +35,9 @@ dependencies {
     //https://github.com/GrenderG/Toasty
     implementation 'com.github.GrenderG:Toasty:1.4.2'
     //for user profile circular image
-    implementation'com.alexzh:circleimageview:1.1.2@aar'
-    implementation 'com.github.rey5137:material:1.2.2'
-    implementation 'com.mikhaellopez:circularimageview:2.0.1'
-    implementation 'com.github.rey5137:material:1.2.2'
     implementation 'de.hdodenhof:circleimageview:2.1.0'
-    implementation 'com.makeramen:roundedimageview:2.2.1'
+    //for google maps nearest location
+    implementation 'com.google.android.gms:play-services-maps:11.0.2'
+    implementation 'com.google.android.gms:play-services-location:11.0.2'
+    implementation 'com.google.maps.android:android-maps-utils:0.5+'
 }

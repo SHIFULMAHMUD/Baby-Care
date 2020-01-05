@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Doctor.DoctorDetailsActivity">
+    tools:context=".doctor.DoctorDetailsActivity">
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -54,43 +54,38 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:layout_marginLeft="20dp"
-                    android:background="@drawable/doc"
                     android:layout_gravity="center"
-                    />
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/doc" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <customfonts.MyTextView
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:letterSpacing="0.025"
+                    android:text="Doctor Name:"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp" />
 
-                    <customfonts.MyTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Doctor Name:"
-                        android:textColor="@android:color/black"
-                        android:letterSpacing="0.025"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
-                        android:textSize="14dp" />
-
-                    <customfonts.MyTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/doc_name"
-                        android:layout_marginLeft="10dp"
-                        android:textColor="@android:color/black"
-                        android:letterSpacing="0.025"
-                        android:textSize="14dp"
-                        />
-
-                </LinearLayout>
+                <customfonts.MyTextView
+                    android:id="@+id/doc_name"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:letterSpacing="0.025"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp" />
 
 
             </LinearLayout>
@@ -106,45 +101,41 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:layout_marginLeft="20dp"
-                    android:background="@drawable/land"
                     android:layout_gravity="center"
-                    />
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/land" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <customfonts.MyTextView
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:letterSpacing="0.025"
+                    android:text="Phone:"
+                    android:textColor="@android:color/black"
 
-                    <customfonts.MyTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Phone:"
-                        android:layout_gravity="center"
-                        android:letterSpacing="0.025"
-                        android:textColor="@android:color/black"
-                        android:layout_marginLeft="20dp"
-                        android:textSize="14dp"
-
-                        />
+                    android:textSize="14dp" />
 
 
-                    <customfonts.MyTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/doc_phone"
-                        android:layout_marginLeft="10dp"
-                        android:letterSpacing="0.025"
-                        android:textColor="@android:color/black"
-                        android:textSize="14dp" />
-
-                </LinearLayout>
+                <customfonts.MyTextView
+                    android:id="@+id/doc_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:autoLink="phone"
+                    android:layout_weight="1"
+                    android:letterSpacing="0.025"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp" />
 
             </LinearLayout>
 
@@ -158,95 +149,84 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:layout_marginLeft="20dp"
-                    android:background="@drawable/address"
                     android:layout_gravity="center"
-                    />
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/address" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <customfonts.MyTextView
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <customfonts.MyTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Address:"
-                        android:letterSpacing="0.025"
-                        android:layout_gravity="center"
-                        android:textColor="@android:color/black"
-                        android:layout_marginLeft="20dp"
-                        android:textSize="14dp"
-
-                        />
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:letterSpacing="0.025"
+                    android:text="Address:"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp" />
 
 
-                    <customfonts.MyTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/doc_address"
-                        android:layout_marginLeft="10dp"
-                        android:letterSpacing="0.025"
-                        android:textColor="@android:color/black"
-                        android:textSize="14dp" />
-
-                </LinearLayout>
+                <customfonts.MyTextView
+                    android:id="@+id/doc_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:letterSpacing="0.025"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp" />
 
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.3dp"
                 android:background="#99A1AC"
                 android:layout_marginTop="20dp"/>
+
             <LinearLayout
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:layout_marginLeft="20dp"
-                    android:background="@drawable/descriptions"
                     android:layout_gravity="center"
-                    />
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/descriptions" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <customfonts.MyTextView
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <customfonts.MyTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Description:"
-                        android:letterSpacing="0.025"
-                        android:layout_gravity="center"
-                        android:textColor="@android:color/black"
-                        android:layout_marginLeft="20dp"
-                        android:textSize="14dp"
-
-                        />
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:letterSpacing="0.025"
+                    android:text="Description:"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp" />
 
 
-                    <customfonts.MyTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/doc_description"
-                        android:layout_marginLeft="10dp"
-                        android:letterSpacing="0.025"
-                        android:textColor="@android:color/black"
-                        android:textSize="14dp" />
+                <customfonts.MyTextView
+                    android:id="@+id/doc_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:letterSpacing="0.025"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp" />
 
-                </LinearLayout>
 
             </LinearLayout>
 

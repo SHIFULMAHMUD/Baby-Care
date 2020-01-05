@@ -11,9 +11,9 @@ public class Constant {
     //url for add baby
     public static final String ADD_BABY_URL = MAIN_URL+"/add_baby.php";
     //url for view doctor
-    public static final String VIEW_DOC_URL = MAIN_URL+"/view_doctor.php";
+    public static final String VIEW_DOC_URL = MAIN_URL+"/view_doctor.php?";
     //url for view health center
-    public static final String VIEW_HEALTH_CENTER_URL = MAIN_URL+"/view_health_center.php";
+    public static final String VIEW_HEALTH_CENTER_URL = MAIN_URL+"/view_health_center.php?";
     //url for vaccine view
     public static final String VIEW_VACCINE_URL = MAIN_URL+"/vaccine.php";
     //url for view baby

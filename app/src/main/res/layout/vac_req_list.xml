@@ -20,7 +20,7 @@
             android:layout_alignParentLeft="true"
             android:layout_centerInParent="true"
             android:padding="5dp"
-            android:src="@drawable/vaccine" />
+            android:src="@drawable/dose" />
 
     </LinearLayout>
     <LinearLayout

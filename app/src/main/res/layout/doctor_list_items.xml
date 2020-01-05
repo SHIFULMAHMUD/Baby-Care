@@ -2,7 +2,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 android:layout_width="match_parent"
 android:id="@+id/relative_list"
-    android:background="#ECB71D"
     android:padding="5dp"
 android:layout_height="wrap_content">
 
@@ -24,7 +23,7 @@ android:layout_height="wrap_content">
             android:layout_marginLeft="16dp"
             android:layout_toRightOf="@id/list_icon"
             android:paddingTop="5dp"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:hint="Md. Mizi Mahbub"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -37,9 +36,9 @@ android:layout_height="wrap_content">
             android:layout_toRightOf="@id/list_icon"
             android:paddingTop="10dp"
             android:layout_below="@+id/txt_doc_name"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:hint="01292939333"
             android:textSize="18dp"
-            android:textStyle="bold" />
+             />
 
     </RelativeLayout>

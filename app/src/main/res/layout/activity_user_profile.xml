@@ -5,7 +5,7 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".User.UserProfile">
+    tools:context=".user.UserProfile">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -48,7 +48,6 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/profile_image"
             android:layout_width="96dp"
             android:layout_height="96dp"
-            android:src="@drawable/male"
             android:layout_gravity="center"
             android:layout_marginTop="80dp"
             app:civ_border_width="2dp"
@@ -81,43 +80,36 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:layout_marginLeft="50dp"
-                android:background="@drawable/phone_black"
                 android:layout_gravity="center"
-                />
+                android:layout_marginLeft="40dp"
+                android:layout_weight="0"
+                android:background="@drawable/phone_black" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+
+            <customfonts.MyTextView
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginLeft="20dp"
+                android:layout_weight="0.3"
+                android:letterSpacing="0.025"
+                android:text="Phone:"
+                android:textColor="@android:color/black"
+                android:textSize="14dp" />
 
-                <customfonts.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Phone:"
-                    android:textColor="@android:color/black"
-                    android:letterSpacing="0.025"
-                    android:layout_marginLeft="30dp"
-                    android:textSize="14dp" />
-
-                <customfonts.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/usercell_tv"
-                    android:layout_marginLeft="30dp"
-                    android:textColor="@android:color/black"
-                    android:letterSpacing="0.025"
-                    android:textSize="14dp"
-                    />
-
-            </LinearLayout>
-
+            <customfonts.MyTextView
+                android:id="@+id/usercell_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:letterSpacing="0.025"
+                android:textColor="@android:color/black"
+                android:textSize="14dp" />
 
         </LinearLayout>
 
@@ -132,44 +124,37 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:layout_marginLeft="50dp"
-                android:background="@drawable/mail_black"
                 android:layout_gravity="center"
-                />
+                android:layout_marginLeft="40dp"
+                android:layout_weight="0"
+                android:background="@drawable/mail_black" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <customfonts.MyTextView
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginLeft="20dp"
+                android:layout_weight="0.3"
+                android:letterSpacing="0.025"
+                android:text="Email:"
+                android:textColor="@android:color/black"
 
-                <customfonts.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Email:"
-                    android:letterSpacing="0.025"
-                    android:textColor="@android:color/black"
-                    android:layout_marginLeft="30dp"
-                    android:textSize="14dp"
-
-                    />
+                android:textSize="14dp" />
 
 
-                <customfonts.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/usermail_tv"
-                    android:layout_marginLeft="30dp"
-                    android:letterSpacing="0.025"
-                    android:textColor="@android:color/black"
-                    android:textSize="14dp" />
-
-            </LinearLayout>
+            <customfonts.MyTextView
+                android:id="@+id/usermail_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:letterSpacing="0.025"
+                android:textColor="@android:color/black"
+                android:textSize="14dp" />
 
         </LinearLayout>
 
@@ -183,44 +168,38 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:layout_marginLeft="50dp"
-                android:background="@drawable/gender_black"
                 android:layout_gravity="center"
-                />
+                android:layout_marginLeft="40dp"
+                android:layout_weight="0"
+                android:background="@drawable/gender_black" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+
+            <customfonts.MyTextView
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginLeft="20dp"
+                android:layout_weight="0.3"
+                android:letterSpacing="0.025"
+                android:text="Gender:"
+                android:textColor="@android:color/black"
 
-                <customfonts.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Gender:"
-                    android:letterSpacing="0.025"
-                    android:textColor="@android:color/black"
-                    android:layout_marginLeft="30dp"
-                    android:textSize="14dp"
-
-                    />
+                android:textSize="14dp" />
 
 
-                <customfonts.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/usergender_tv"
-                    android:layout_marginLeft="30dp"
-                    android:letterSpacing="0.025"
-                    android:textColor="@android:color/black"
-                    android:textSize="14dp" />
-
-            </LinearLayout>
+            <customfonts.MyTextView
+                android:id="@+id/usergender_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:letterSpacing="0.025"
+                android:textColor="@android:color/black"
+                android:textSize="14dp" />
 
         </LinearLayout>
         <View
@@ -228,8 +207,8 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_height="0.3dp"
             android:background="#99A1AC"
             android:layout_marginTop="20dp"/>
+        </LinearLayout>
 
-    </LinearLayout>
 
 </RelativeLayout>
 </RelativeLayout>

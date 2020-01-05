@@ -4,35 +4,36 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+
+
+
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/man"
+            android:title="Profile" />
+
+        <item
+            android:id="@+id/nav_add_baby"
             android:icon="@drawable/add_baby"
             android:title="Add Baby" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_order_vaccine"
             android:icon="@drawable/syringe"
             android:title="Order Vaccine" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/date_black"
-            android:title="Vaccine Schedule" />
+            android:id="@+id/nav_nearby_hospital"
+            android:icon="@drawable/hospital"
+            android:title="Nearby Hospitals" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/signout"
-            android:title="Sign out" />
+            android:id="@+id/nav_guide"
+            android:icon="@drawable/book"
+            android:title="Baby Care Guide" />
+
+        <item
+            android:id="@+id/nav_sign_out"
+            android:icon="@drawable/logout"
+            android:title="Log out" />
+
+
     </group>
-
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
-
 </menu>

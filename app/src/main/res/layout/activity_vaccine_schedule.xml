@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Baby.VaccineSchedule">
+    tools:context=".baby.VaccineSchedule">
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,9 +20,11 @@
 
     </android.support.design.widget.AppBarLayout>
     <ListView
+        android:padding="10dp"
         android:id="@+id/simpleListView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:listSelector="@android:color/holo_orange_dark"
         android:divider="@color/material_blue_grey_800"
         android:dividerHeight="1dp"
         android:footerDividersEnabled="false" />

@@ -1,136 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Baby.BabyDetailsActivity">
-
-<android.support.design.widget.AppBarLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/appbar"
-    android:theme="@style/AppTheme.AppBarOverlay">
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-</android.support.design.widget.AppBarLayout>
+    tools:context=".baby.BabyDetailsActivity">
 <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_below="@+id/appbar">
-
-    <LinearLayout
-        android:id="@+id/natural"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:orientation="horizontal"
-        android:background="@drawable/babu">
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_below="@+id/natural"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="20dp"
-        android:id="@+id/lastLayout"
-        android:orientation="vertical">
+        android:id="@+id/appbar"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar">
 
         <LinearLayout
+            android:id="@+id/natural"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="horizontal"
+            android:background="@drawable/babu">
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/natural"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:paddingTop="20dp"
+            android:id="@+id/lastLayout"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="50dp"
-                android:background="@drawable/kidd"
-                android:layout_gravity="center"
-                />
 
             <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/kidd" />
+
                 <customfonts.MyTextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="0.7"
+                    android:letterSpacing="0.025"
                     android:text="Baby Name:"
                     android:textColor="@android:color/black"
-                    android:letterSpacing="0.025"
-                    android:layout_marginLeft="30dp"
                     android:textSize="14dp" />
 
                 <customfonts.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/baby_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:letterSpacing="0.025"
                     android:layout_marginLeft="30dp"
                     android:textColor="@android:color/black"
-                    android:letterSpacing="0.025"
-                    android:textSize="14dp"
-                    />
+                    android:textSize="14dp" />
+
 
             </LinearLayout>
 
 
-        </LinearLayout>
-
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.3dp"
-            android:background="#99A1AC"
-            android:layout_marginTop="20dp"/>
-
-        <LinearLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp">
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="50dp"
-                android:background="@drawable/blood"
-                android:layout_gravity="center"
-                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="#99A1AC"
+                android:layout_marginTop="20dp"/>
 
             <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/blood" />
+
+
                 <customfonts.MyTextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="0.7"
+                    android:letterSpacing="0.025"
                     android:text="Blood Group:"
-                    android:letterSpacing="0.025"
                     android:textColor="@android:color/black"
-                    android:layout_marginLeft="30dp"
-                    android:textSize="14dp"
-
-                    />
+                    android:textSize="14dp" />
 
 
                 <customfonts.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/blood_group"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:layout_marginLeft="30dp"
                     android:letterSpacing="0.025"
                     android:textColor="@android:color/black"
@@ -138,50 +130,44 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 
             </LinearLayout>
 
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.3dp"
-            android:background="#99A1AC"
-            android:layout_marginTop="20dp"/>
-
-        <LinearLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp">
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="50dp"
-                android:id="@+id/gender_imageview"
-                android:layout_gravity="center"
-                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="#99A1AC"
+                android:layout_marginTop="20dp"/>
 
             <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
+                <ImageView
+                    android:id="@+id/gender_imageview"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:layout_weight="0" />
+
                 <customfonts.MyTextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="0.7"
+                    android:letterSpacing="0.025"
                     android:text="Gender:"
-                    android:letterSpacing="0.025"
                     android:textColor="@android:color/black"
-                    android:layout_marginLeft="30dp"
-                    android:textSize="14dp"
 
-                    />
+                    android:textSize="14dp" />
 
 
                 <customfonts.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/baby_gender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:layout_marginLeft="30dp"
                     android:letterSpacing="0.025"
                     android:textColor="@android:color/black"
@@ -189,129 +175,130 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 
             </LinearLayout>
 
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.3dp"
-            android:background="#99A1AC"
-            android:layout_marginTop="20dp"/>
-        <LinearLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp">
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="50dp"
-                android:background="@drawable/calender"
-                android:layout_gravity="center"
-                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="#99A1AC"
+                android:layout_marginTop="20dp"/>
 
             <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/calender" />
+
                 <customfonts.MyTextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="0.7"
+                    android:letterSpacing="0.025"
                     android:text="Date of Birth:"
-                    android:letterSpacing="0.025"
                     android:textColor="@android:color/black"
-                    android:layout_marginLeft="30dp"
-                    android:textSize="14dp"
-
-                    />
+                    android:textSize="14dp" />
 
 
                 <customfonts.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/date_of_birth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:layout_marginLeft="30dp"
                     android:letterSpacing="0.025"
                     android:textColor="@android:color/black"
                     android:textSize="14dp" />
 
+
             </LinearLayout>
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.3dp"
-            android:background="#99A1AC"
-            android:layout_marginTop="20dp"/>
-        <LinearLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp">
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="50dp"
-                android:background="@drawable/address"
-                android:layout_gravity="center"
-                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="#99A1AC"
+                android:layout_marginTop="20dp"/>
 
             <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/address" />
+
                 <customfonts.MyTextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Birth Place:"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="0.7"
                     android:letterSpacing="0.025"
+                    android:text="Birth Place:"
                     android:textColor="@android:color/black"
-                    android:layout_marginLeft="30dp"
-                    android:textSize="14dp"
-
-                    />
+                    android:textSize="14dp" />
 
 
                 <customfonts.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/birth_place"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
+                    android:layout_weight="1"
                     android:letterSpacing="0.025"
                     android:textColor="@android:color/black"
                     android:textSize="14dp" />
 
+
             </LinearLayout>
-
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="#99A1AC"
+                android:layout_marginTop="20dp"/>
         </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.3dp"
-            android:background="#99A1AC"
-            android:layout_marginTop="20dp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_below="@+id/lastLayout">
-        <Button
+        <!--<CheckBox
+            android:id="@+id/ch_notifyme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:background="@android:color/holo_orange_dark"
-            android:text="Vaccine Schedule"
-            android:padding="5dp"
-            android:textColor="@android:color/black"
-            android:id="@+id/vacListBtn"
-            android:textAllCaps="false" />
-    </LinearLayout>
+            android:text="Notify Me"
+            android:layout_below="@+id/lastLayout"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@+id/lastLayout">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/holo_orange_dark"
+                android:text="Vaccine Schedule"
+                android:padding="5dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@android:color/white"
+                android:id="@+id/vacListBtn"
+                android:textAllCaps="false" />
+        </LinearLayout>
 
 
+    </RelativeLayout>
+
 </RelativeLayout>
-</RelativeLayout>
+</ScrollView>

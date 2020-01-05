@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 android:layout_width="match_parent"
 android:id="@+id/relative_list"
-android:background="#ECB71D"
+android:background="#009688"
 android:layout_height="wrap_content">
 
 <ImageView
@@ -14,15 +14,15 @@ android:layout_height="wrap_content">
     android:layout_alignParentStart="true"
     android:src="@drawable/injection"/>
 
-<TextView
+<customfonts.MyTextView
     android:id="@+id/txt_vac_name"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentTop="true"
     android:layout_centerInParent="true"
-    android:layout_marginLeft="16dp"
+    android:layout_marginLeft="26dp"
     android:layout_toRightOf="@id/list_icon"
-    android:textColor="#000"
+    android:textColor="#fff"
     android:hint="Md. Mizi Mahbub"
     android:textSize="20dp"
     android:textStyle="bold" />

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".User.LoginActivity">
+    tools:context=".user.LoginActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -139,15 +139,24 @@
                 android:textSize="15sp" />
 
         </RelativeLayout>
+        <CheckBox
+            android:id="@+id/ch_rememberme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember Me"
+            android:layout_below="@+id/relativeLayout2"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            />
 
         <Button
             android:id="@+id/btn_signIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/relativeLayout2"
+            android:layout_below="@+id/ch_rememberme"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="25dp"
             android:background="@drawable/round_border"
             android:fontFamily="sans-serif-medium"
             android:text="SIGN IN"

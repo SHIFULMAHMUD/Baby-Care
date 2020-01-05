@@ -4,7 +4,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".Baby.AddBaby">
+tools:context=".baby.AddBaby">
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -121,14 +121,19 @@ tools:context=".Baby.AddBaby">
                 android:padding="8dp"
                 android:src="@drawable/gender"
                 android:tint="#FFF" />
-            <Spinner
+
+            <EditText
+                android:id="@+id/et_gender"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="-3dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:hint="Baby Gender"
                 android:layout_toRightOf="@+id/iv_gender"
                 android:background="#bcbbbb"
-                android:id="@+id/sp_gender"
-                android:paddingLeft="15dp"
+                android:paddingLeft="25dp"
                 android:textSize="15sp" />
 
 
@@ -151,17 +156,16 @@ tools:context=".Baby.AddBaby">
                 android:src="@drawable/bood"
                 android:tint="#FFF" />
 
-            <EditText
+            <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/iv_bg"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@+id/iv_bg"
                 android:background="#bcbbbb"
-                android:hint="Blood Group"
-                android:id="@+id/et_bg"
+                android:id="@+id/spinner_bg"
                 android:inputType="text"
-                android:paddingLeft="20dp"
+                android:paddingLeft="15dp"
                 android:textSize="15sp" />
 
         </RelativeLayout>

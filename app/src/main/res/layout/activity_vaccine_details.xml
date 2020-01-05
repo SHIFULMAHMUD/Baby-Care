@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Vaccine.VaccineDetailsActivity">
+    tools:context=".vaccine.VaccineDetailsActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -50,43 +50,38 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="20dp">
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:layout_marginLeft="20dp"
-                        android:background="@drawable/vaccin"
                         android:layout_gravity="center"
-                        />
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/vaccin" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <customfonts.MyTextView
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.025"
+                        android:text="Vaccine Name:"
+                        android:textColor="@android:color/black"
+                        android:textSize="14dp" />
 
-                        <customfonts.MyTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Vaccine Name:"
-                            android:textColor="@android:color/black"
-                            android:letterSpacing="0.025"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="20dp"
-                            android:textSize="14dp" />
-
-                        <customfonts.MyTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/vac_name"
-                            android:layout_marginLeft="10dp"
-                            android:textColor="@android:color/black"
-                            android:letterSpacing="0.025"
-                            android:textSize="14dp"
-                            />
-
-                    </LinearLayout>
+                    <customfonts.MyTextView
+                        android:id="@+id/vac_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.025"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="14dp" />
 
 
                 </LinearLayout>
@@ -102,45 +97,40 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="20dp">
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:layout_marginLeft="20dp"
-                        android:background="@drawable/diseases"
                         android:layout_gravity="center"
-                        />
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/diseases" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <customfonts.MyTextView
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.025"
+                        android:text="Diseases:"
+                        android:textColor="@android:color/black"
 
-                        <customfonts.MyTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Diseases:"
-                            android:layout_gravity="center"
-                            android:letterSpacing="0.025"
-                            android:textColor="@android:color/black"
-                            android:layout_marginLeft="20dp"
-                            android:textSize="14dp"
-
-                            />
+                        android:textSize="14dp" />
 
 
-                        <customfonts.MyTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/disease_name"
-                            android:layout_marginLeft="10dp"
-                            android:letterSpacing="0.025"
-                            android:textColor="@android:color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
+                    <customfonts.MyTextView
+                        android:id="@+id/disease_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:letterSpacing="0.025"
+                        android:textColor="@android:color/black"
+                        android:textSize="14dp" />
 
                 </LinearLayout>
 
@@ -154,95 +144,40 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="20dp">
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:layout_marginLeft="20dp"
-                        android:background="@drawable/dose"
                         android:layout_gravity="center"
-                        />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <customfonts.MyTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="No of Doses:"
-                            android:letterSpacing="0.025"
-                            android:layout_gravity="center"
-                            android:textColor="@android:color/black"
-                            android:layout_marginLeft="20dp"
-                            android:textSize="14dp"
-
-                            />
-
-
-                        <customfonts.MyTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/no_of_dose"
-                            android:layout_marginLeft="10dp"
-                            android:letterSpacing="0.025"
-                            android:textColor="@android:color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.3dp"
-                    android:background="#99A1AC"
-                    android:layout_marginTop="20dp"/>
-                <LinearLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="20dp">
-
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
                         android:layout_marginLeft="20dp"
-                        android:background="@drawable/clock"
-                        android:layout_gravity="center"
-                        />
+                        android:layout_weight="0"
+                        android:background="@drawable/dose" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <customfonts.MyTextView
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.025"
+                        android:text="No of Doses:"
+                        android:textColor="@android:color/black"
 
-                        <customfonts.MyTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Interval between Doses:"
-                            android:letterSpacing="0.025"
-                            android:layout_gravity="center"
-                            android:textColor="@android:color/black"
-                            android:layout_marginLeft="20dp"
-                            android:textSize="14dp"
-
-                            />
+                        android:textSize="14dp" />
 
 
-                        <customfonts.MyTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/interval"
-                            android:layout_marginLeft="10dp"
-                            android:letterSpacing="0.025"
-                            android:textColor="@android:color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
+                    <customfonts.MyTextView
+                        android:id="@+id/no_of_dose"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:letterSpacing="0.025"
+                        android:textColor="@android:color/black"
+                        android:textSize="14dp" />
 
                 </LinearLayout>
 
@@ -251,49 +186,45 @@
                     android:layout_height="0.3dp"
                     android:background="#99A1AC"
                     android:layout_marginTop="20dp"/>
+
                 <LinearLayout
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="20dp">
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:layout_marginLeft="20dp"
-                        android:background="@drawable/clock"
                         android:layout_gravity="center"
-                        />
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/clock" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <customfonts.MyTextView
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.025"
+                        android:text="Interval between Doses:"
+                        android:textColor="@android:color/black"
 
-                        <customfonts.MyTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Starting Time of Doses:"
-                            android:letterSpacing="0.025"
-                            android:layout_gravity="center"
-                            android:textColor="@android:color/black"
-                            android:layout_marginLeft="20dp"
-                            android:textSize="14dp"
-
-                            />
+                        android:textSize="14dp" />
 
 
-                        <customfonts.MyTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/starting_time"
-                            android:layout_marginLeft="10dp"
-                            android:letterSpacing="0.025"
-                            android:textColor="@android:color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
+                    <customfonts.MyTextView
+                        android:id="@+id/interval"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:letterSpacing="0.025"
+                        android:textColor="@android:color/black"
+                        android:textSize="14dp" />
 
                 </LinearLayout>
 
@@ -302,49 +233,92 @@
                     android:layout_height="0.3dp"
                     android:background="#99A1AC"
                     android:layout_marginTop="20dp"/>
+
                 <LinearLayout
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="20dp">
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:layout_marginLeft="20dp"
-                        android:background="@drawable/routeinj"
                         android:layout_gravity="center"
-                        />
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/clock" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <customfonts.MyTextView
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.025"
+                        android:text="Starting Time of Doses:"
+                        android:textColor="@android:color/black"
 
-                        <customfonts.MyTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Route of Administration:"
-                            android:letterSpacing="0.025"
-                            android:layout_gravity="center"
-                            android:textColor="@android:color/black"
-                            android:layout_marginLeft="20dp"
-                            android:textSize="14dp"
-
-                            />
+                        android:textSize="14dp" />
 
 
-                        <customfonts.MyTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/route"
-                            android:layout_marginLeft="10dp"
-                            android:letterSpacing="0.025"
-                            android:textColor="@android:color/black"
-                            android:textSize="14dp" />
+                    <customfonts.MyTextView
+                        android:id="@+id/starting_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:letterSpacing="0.025"
+                        android:textColor="@android:color/black"
+                        android:textSize="14dp" />
 
-                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="#99A1AC"
+                    android:layout_marginTop="20dp"/>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/routeinj" />
+
+                    <customfonts.MyTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.025"
+                        android:text="Route of Administration:"
+                        android:textColor="@android:color/black"
+
+                        android:textSize="14dp" />
+
+
+                    <customfonts.MyTextView
+                        android:id="@+id/route"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:letterSpacing="0.025"
+                        android:textColor="@android:color/black"
+                        android:textSize="14dp" />
 
                 </LinearLayout>
 
@@ -377,178 +351,3 @@
     </RelativeLayout>
 
 </ScrollView>
-
-
-    <!--
-    <?xml version="1.0" encoding="utf-8"?>
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorAccent"
-    tools:context=".Vaccine.VaccineDetailsActivity">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <android.support.design.widget.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/AppTheme.AppBarOverlay">
-
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-        </android.support.design.widget.AppBarLayout>
-        <LinearLayout
-            android:id="@+id/linearLayout1"
-            android:layout_width="match_parent"
-            android:layout_margin="10dp"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Vaccine Name:"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/white"/>
-
-            <TextView
-                android:id="@+id/vac_name"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="18sp"
-                android:textColor="@android:color/white"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_below="@+id/linearLayout1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Disease:"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/white"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/disease_name"
-                android:textSize="18sp"
-                android:textColor="@android:color/white"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/linearLayout3"
-            android:layout_below="@+id/linearLayout2"
-            android:layout_margin="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="No. of Dose:"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/white"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/no_of_dose"
-                android:textSize="18sp"
-                android:textColor="@android:color/white"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/linearLayout4"
-            android:layout_below="@+id/linearLayout3"
-            android:layout_margin="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Interval between doses:"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/white"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/interval"
-                android:textSize="18sp"
-                android:textColor="@android:color/white"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/linearLayout5"
-            android:layout_below="@+id/linearLayout4"
-            android:layout_margin="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Starting time of doses:"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/white"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/starting_time"
-                android:textSize="18sp"
-                android:textColor="@android:color/white"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/linearLayout6"
-            android:layout_below="@+id/linearLayout5"
-            android:layout_margin="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Route of Administration:"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/white"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/route"
-                android:textSize="18sp"
-                android:textColor="@android:color/white"/>
-        </LinearLayout>
-
-    </LinearLayout>
-
-    </ScrollView>-->
