@@ -158,4 +158,8 @@ public class DataParser {
         return polyline;
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master

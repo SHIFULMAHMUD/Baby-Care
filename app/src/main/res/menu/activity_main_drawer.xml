@@ -7,12 +7,21 @@
 
 
 
+<<<<<<< HEAD
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/man"
             android:title="Profile" />
 
         <item
+=======
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/man"
+            android:title="Profile" />
+
+        <item
+>>>>>>> origin/master
             android:id="@+id/nav_add_baby"
             android:icon="@drawable/add_baby"
             android:title="Add Baby" />
@@ -20,6 +29,7 @@
             android:id="@+id/nav_order_vaccine"
             android:icon="@drawable/syringe"
             android:title="Order Vaccine" />
+<<<<<<< HEAD
         <item
             android:id="@+id/nav_nearby_hospital"
             android:icon="@drawable/hospital"
@@ -37,3 +47,20 @@
 
     </group>
 </menu>
+=======
+
+
+    </group>
+
+    <item android:title="Others">
+        <menu>
+
+            <item
+                android:id="@+id/nav_sign_out"
+                android:icon="@drawable/signout"
+                android:title="Sign out" />
+        </menu>
+    </item>
+
+</menu>
+>>>>>>> origin/master

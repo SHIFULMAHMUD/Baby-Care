@@ -3,9 +3,14 @@ package shiful.android.babycare.doctor;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+<<<<<<< HEAD:app/src/main/java/shiful/android/babycare/doctor/DoctorActivity.java
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+=======
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+>>>>>>> origin/master:app/src/main/java/shiful/android/babycare/Doctor/DoctorActivity.java
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;

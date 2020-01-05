@@ -4,22 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context=".user.RegisterActivity">
     <android.support.design.widget.AppBarLayout
+=======
+    tools:context=".User.RegisterActivity">
+    <com.google.android.material.appbar.AppBarLayout
+>>>>>>> origin/master
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-    </android.support.design.widget.AppBarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
-<android.support.v7.widget.CardView
+<androidx.cardview.widget.CardView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_centerInParent="true"
@@ -98,9 +103,13 @@
                 android:layout_alignBottom="@+id/iv_user"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@+id/iv_user"
-                android:inputType="text"
                 android:background="#bcbbbb"
+<<<<<<< HEAD
                 android:hint="Name"
+=======
+                android:hint="Your Name"
+                android:inputType="text"
+>>>>>>> origin/master
                 android:paddingLeft="20dp"
                 android:textSize="15sp" />
 
@@ -269,5 +278,5 @@
 
 
 
-</android.support.v7.widget.CardView>
+</androidx.cardview.widget.CardView>
 </RelativeLayout>

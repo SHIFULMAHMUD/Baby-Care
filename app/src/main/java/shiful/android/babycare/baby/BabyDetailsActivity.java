@@ -2,9 +2,14 @@ package shiful.android.babycare.baby;
 
 import android.content.Intent;
 import android.os.Bundle;
+<<<<<<< HEAD:app/src/main/java/shiful/android/babycare/baby/BabyDetailsActivity.java
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+=======
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+>>>>>>> origin/master:app/src/main/java/shiful/android/babycare/Baby/BabyDetailsActivity.java
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;

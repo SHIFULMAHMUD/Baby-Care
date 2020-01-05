@@ -2,6 +2,7 @@ package shiful.android.babycare.maps;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+<<<<<<< HEAD
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,6 +14,25 @@ import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+=======
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+import android.os.Build;
+import android.os.Bundle;
+
+import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentActivity;
+
+>>>>>>> origin/master
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -28,6 +48,12 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+<<<<<<< HEAD
+=======
+import java.io.IOException;
+import java.util.List;
+
+>>>>>>> origin/master
 import shiful.android.babycare.R;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,
@@ -263,4 +289,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master

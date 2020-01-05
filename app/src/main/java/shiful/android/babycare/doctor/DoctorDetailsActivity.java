@@ -3,10 +3,15 @@ package shiful.android.babycare.doctor;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+<<<<<<< HEAD:app/src/main/java/shiful/android/babycare/doctor/DoctorDetailsActivity.java
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+=======
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+>>>>>>> origin/master:app/src/main/java/shiful/android/babycare/Doctor/DoctorDetailsActivity.java
 import android.widget.TextView;
 
 import shiful.android.babycare.R;

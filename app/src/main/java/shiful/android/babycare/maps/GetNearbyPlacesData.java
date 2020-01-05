@@ -70,4 +70,8 @@ class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
             mMap.animateCamera(CameraUpdateFactory.zoomTo(10));
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master

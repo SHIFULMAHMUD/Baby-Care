@@ -2,16 +2,19 @@ package shiful.android.babycare.home;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
+import androidx.cardview.widget.CardView;
+
+import android.provider.ContactsContract;
 import android.view.View;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.navigation.NavigationView;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+<<<<<<< HEAD:app/src/main/java/shiful/android/babycare/home/HomeActivity.java
 import android.widget.Toast;
 
 import es.dmoral.toasty.Toasty;
@@ -27,6 +30,22 @@ import shiful.android.babycare.user.UserProfile;
 import shiful.android.babycare.vaccine.RequestVaccine;
 import shiful.android.babycare.vaccine.VaccineActivity;
 import shiful.android.babycare.vaccine.ViewRequest;
+=======
+
+import shiful.android.babycare.Baby.AddBaby;
+import shiful.android.babycare.Baby.VaccineSchedule;
+import shiful.android.babycare.Baby.ViewBaby;
+import shiful.android.babycare.Doctor.DoctorActivity;
+import shiful.android.babycare.HealthCenter.HealthCenterActivity;
+
+import shiful.android.babycare.R;
+import shiful.android.babycare.User.LoginActivity;
+import shiful.android.babycare.User.UserProfile;
+import shiful.android.babycare.Vaccine.RequestVaccine;
+import shiful.android.babycare.Vaccine.VaccineActivity;
+import shiful.android.babycare.Vaccine.ViewRequest;
+import shiful.android.babycare.maps.MapsActivity;
+>>>>>>> origin/master:app/src/main/java/shiful/android/babycare/Home/HomeActivity.java
 
 
 public class HomeActivity extends AppCompatActivity
@@ -133,6 +152,7 @@ public class HomeActivity extends AppCompatActivity
         }
     }
 
+<<<<<<< HEAD:app/src/main/java/shiful/android/babycare/home/HomeActivity.java
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -154,6 +174,29 @@ public class HomeActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
+=======
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.main, menu);
+//        return true;
+//    }
+
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
+//
+//        return super.onOptionsItemSelected(item);
+//    }
+>>>>>>> origin/master:app/src/main/java/shiful/android/babycare/Home/HomeActivity.java
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -161,6 +204,7 @@ public class HomeActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+<<<<<<< HEAD:app/src/main/java/shiful/android/babycare/home/HomeActivity.java
         if (id == R.id.nav_profile) {
             Intent intent=new Intent(HomeActivity.this, UserProfile.class);
             startActivity(intent);
@@ -169,11 +213,25 @@ public class HomeActivity extends AppCompatActivity
             Intent intent=new Intent(HomeActivity.this, ViewBaby.class);
             startActivity(intent);
         }
+=======
+
+        if (id == R.id.nav_profile) {
+            Intent intent=new Intent(HomeActivity.this, UserProfile.class);
+            startActivity(intent);
+        }
+
+
+        if (id == R.id.nav_add_baby) {
+            Intent intent=new Intent(HomeActivity.this, ViewBaby.class);
+            startActivity(intent);
+        }
+>>>>>>> origin/master:app/src/main/java/shiful/android/babycare/Home/HomeActivity.java
         else if (id == R.id.nav_order_vaccine) {
             Intent intent=new Intent(HomeActivity.this, VaccineActivity.class);
             startActivity(intent);
 
         }
+<<<<<<< HEAD:app/src/main/java/shiful/android/babycare/home/HomeActivity.java
         else if (id == R.id.nav_nearby_hospital) {
             Intent intent=new Intent(HomeActivity.this, MapsActivity.class);
             startActivity(intent);
@@ -182,6 +240,8 @@ public class HomeActivity extends AppCompatActivity
             Intent intent=new Intent(HomeActivity.this, PdfActivity.class);
             startActivity(intent);
         }
+=======
+>>>>>>> origin/master:app/src/main/java/shiful/android/babycare/Home/HomeActivity.java
         else if (id == R.id.nav_sign_out) {
             Intent intent=new Intent(HomeActivity.this, LoginActivity.class);
             startActivity(intent);

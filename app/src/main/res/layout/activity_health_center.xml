@@ -7,22 +7,22 @@ android:layout_height="match_parent"
 tools:context=".healthcenter.HealthCenterActivity">
 
 <LinearLayout
-    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <android.support.design.widget.AppBarLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
+<<<<<<< HEAD
     </android.support.design.widget.AppBarLayout>
     <LinearLayout
         android:id="@+id/layout1"
@@ -49,6 +49,9 @@ tools:context=".healthcenter.HealthCenterActivity">
             android:background="@color/colorPrimaryDark"
             android:text="Search" />
     </LinearLayout>
+=======
+    </com.google.android.material.appbar.AppBarLayout>
+>>>>>>> origin/master
     <ListView
         android:id="@+id/hc_list"
         android:layout_width="match_parent"
