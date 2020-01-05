@@ -6,15 +6,10 @@ package shiful.android.babycare.user;
         import android.content.Intent;
         import android.content.SharedPreferences;
         import android.os.Bundle;
-<<<<<<< HEAD:app/src/main/java/shiful/android/babycare/user/LoginActivity.java
-        import android.support.v7.app.AppCompatActivity;
-        import android.support.v7.widget.Toolbar;
         import android.text.Editable;
         import android.text.TextWatcher;
-=======
         import androidx.appcompat.app.AppCompatActivity;
         import androidx.appcompat.widget.Toolbar;
->>>>>>> origin/master:app/src/main/java/shiful/android/babycare/User/LoginActivity.java
         import android.util.Log;
         import android.view.View;
         import android.view.WindowManager;

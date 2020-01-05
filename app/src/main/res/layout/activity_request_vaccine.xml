@@ -4,13 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
     tools:context=".vaccine.RequestVaccine">
-    <android.support.design.widget.AppBarLayout
-=======
-    tools:context=".Vaccine.RequestVaccine">
+
     <com.google.android.material.appbar.AppBarLayout
->>>>>>> origin/master
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
@@ -102,20 +99,12 @@
                     android:layout_alignBottom="@+id/iv_baby"
                     android:layout_alignParentTop="true"
                     android:layout_toRightOf="@+id/iv_baby"
-<<<<<<< HEAD
-                    android:inputType="text"
                     android:gravity="center"
                     android:textColor="@android:color/black"
-=======
->>>>>>> origin/master
                     android:background="#bcbbbb"
-                    android:gravity="center_vertical"
                     android:hint="Vaccine Name"
-<<<<<<< HEAD
-=======
                     android:inputType="text"
                     android:paddingLeft="15dp"
->>>>>>> origin/master
                     android:textSize="15sp" />
 
             </RelativeLayout>
@@ -146,11 +135,7 @@
                     android:textColor="@android:color/black"
                     android:layout_toRightOf="@+id/iv_gender"
                     android:background="#bcbbbb"
-<<<<<<< HEAD
-=======
-                    android:hint="Baby Name"
                     android:paddingLeft="15dp"
->>>>>>> origin/master
                     android:textSize="15sp" />
 
 

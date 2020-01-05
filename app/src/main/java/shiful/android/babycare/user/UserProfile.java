@@ -4,18 +4,18 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-<<<<<<< HEAD:app/src/main/java/shiful/android/babycare/user/UserProfile.java
+
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Shader;
-import android.support.v7.app.AppCompatActivity;
-=======
+
+
 
 import androidx.appcompat.app.AppCompatActivity;
->>>>>>> origin/master:app/src/main/java/shiful/android/babycare/User/UserProfile.java
+
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 import android.util.Log;

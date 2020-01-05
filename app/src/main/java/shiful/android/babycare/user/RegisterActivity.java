@@ -77,10 +77,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-<<<<<<< HEAD:app/src/main/java/shiful/android/babycare/user/RegisterActivity.java
-=======
 
->>>>>>> origin/master:app/src/main/java/shiful/android/babycare/User/RegisterActivity.java
         //For choosing account type and open alert dialog
         etxtGender.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,10 +123,6 @@ public class RegisterActivity extends AppCompatActivity {
 
         });
 
-<<<<<<< HEAD:app/src/main/java/shiful/android/babycare/user/RegisterActivity.java
-=======
-
->>>>>>> origin/master:app/src/main/java/shiful/android/babycare/User/RegisterActivity.java
     }
 
 
@@ -151,19 +144,12 @@ public class RegisterActivity extends AppCompatActivity {
         }
         else if (cell.length()!=11) {
 
-<<<<<<< HEAD:app/src/main/java/shiful/android/babycare/user/RegisterActivity.java
             etxtCell.setError("Please enter valid phone number !");
             requestFocus(etxtCell);
 
         }
-        else if (email.isEmpty() || !email.contains("@") || !email.contains(".")) {
-=======
-            etxtCell.setError("Please enter valid cell !");
-            requestFocus(etxtCell);
 
-        }
-        else if (email.isEmpty() || email.contains("@") || email.contains(".")) {
->>>>>>> origin/master:app/src/main/java/shiful/android/babycare/User/RegisterActivity.java
+        else if (email.isEmpty() || !email.contains("@") || !email.contains(".")) {
 
             etxtEmail.setError("Please enter valid email !");
             requestFocus(etxtEmail);

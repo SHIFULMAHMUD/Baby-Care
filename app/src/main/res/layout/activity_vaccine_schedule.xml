@@ -5,13 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-<<<<<<< HEAD
     tools:context=".baby.VaccineSchedule">
-    <android.support.design.widget.AppBarLayout
-=======
-    tools:context=".Baby.VaccineSchedule">
+
     <com.google.android.material.appbar.AppBarLayout
->>>>>>> origin/master
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">

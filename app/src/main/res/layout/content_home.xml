@@ -214,11 +214,7 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:padding="5dp"
-<<<<<<< HEAD
                         android:src="@drawable/medical_center_nearby"/>
-=======
-                        android:src="@drawable/medical"/>
->>>>>>> origin/master
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -226,11 +222,7 @@
                         android:gravity="center"
                         android:layout_marginTop="5dp"
                         android:textColor="@android:color/white"
-<<<<<<< HEAD
                         android:text="Nearby Hospitals"/>
-=======
-                        android:text="Nearest Health Center"/>
->>>>>>> origin/master
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

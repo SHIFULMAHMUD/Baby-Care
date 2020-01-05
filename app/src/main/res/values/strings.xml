@@ -6,12 +6,8 @@
     <string name="nav_header_subtitle">Helps to build a secure baby health</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-<<<<<<< HEAD
     <string name="title_activity_dlt">dlt</string>
     <string name="title_activity_maps">Map</string>
     <string name="press_once_again_to_exit">Press once again to exit!</string>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCsXwChJiMtdWfz74-XJZjmAJhgcCOm1tE</string>
-=======
-    <string name="title_activity_maps">Map</string>
->>>>>>> origin/master
 </resources>

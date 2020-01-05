@@ -17,11 +17,10 @@ import java.util.List;
 public class DataParser {
 
 
-    private HashMap<String, String> getDuration(JSONArray googleDirectionsJson)
-    {
+    private HashMap<String, String> getDuration(JSONArray googleDirectionsJson) {
         HashMap<String, String> googleDirectionsMap = new HashMap<>();
         String duration = "";
-        String distance ="";
+        String distance = "";
 
 
         try {
@@ -29,7 +28,7 @@ public class DataParser {
             duration = googleDirectionsJson.getJSONObject(0).getJSONObject("duration").getString("text");
             distance = googleDirectionsJson.getJSONObject(0).getJSONObject("distance").getString("text");
 
-            googleDirectionsMap.put("duration" , duration);
+            googleDirectionsMap.put("duration", duration);
             googleDirectionsMap.put("distance", distance);
 
         } catch (JSONException e) {
@@ -41,16 +40,15 @@ public class DataParser {
     }
 
 
-    private HashMap<String, String> getPlace(JSONObject googlePlaceJson)
-    {
+    private HashMap<String, String> getPlace(JSONObject googlePlaceJson) {
         HashMap<String, String> googlePlaceMap = new HashMap<>();
         String placeName = "--NA--";
-        String vicinity= "--NA--";
-        String latitude= "";
-        String longitude="";
-        String reference="";
+        String vicinity = "--NA--";
+        String latitude = "";
+        String longitude = "";
+        String reference = "";
 
-        Log.d("DataParser","jsonobject ="+googlePlaceJson.toString());
+        Log.d("DataParser", "jsonobject =" + googlePlaceJson.toString());
 
 
         try {
@@ -73,21 +71,19 @@ public class DataParser {
             googlePlaceMap.put("reference", reference);
 
 
-        }
-        catch (JSONException e) {
+        } catch (JSONException e) {
             e.printStackTrace();
         }
         return googlePlaceMap;
 
     }
-    private List<HashMap<String, String>> getPlaces(JSONArray jsonArray)
-    {
+
+    private List<HashMap<String, String>> getPlaces(JSONArray jsonArray) {
         int count = jsonArray.length();
         List<HashMap<String, String>> placelist = new ArrayList<>();
         HashMap<String, String> placeMap = null;
 
-        for(int i = 0; i<count;i++)
-        {
+        for (int i = 0; i < count; i++) {
             try {
                 placeMap = getPlace((JSONObject) jsonArray.get(i));
                 placelist.add(placeMap);
@@ -98,8 +94,7 @@ public class DataParser {
         return placelist;
     }
 
-    public List<HashMap<String, String>> parse(String jsonData)
-    {
+    public List<HashMap<String, String>> parse(String jsonData) {
         JSONArray jsonArray = null;
         JSONObject jsonObject;
 
@@ -115,8 +110,7 @@ public class DataParser {
     }
 
 
-    public String[] parseDirections(String jsonData)
-    {
+    public String[] parseDirections(String jsonData) {
         JSONArray jsonArray = null;
         JSONObject jsonObject;
 
@@ -130,13 +124,11 @@ public class DataParser {
     }
 
 
-    public String[] getPaths(JSONArray googleStepsJson )
-    {
+    public String[] getPaths(JSONArray googleStepsJson) {
         int count = googleStepsJson.length();
         String[] polylines = new String[count];
 
-        for(int i = 0;i<count;i++)
-        {
+        for (int i = 0; i < count; i++) {
             try {
                 polylines[i] = getPath(googleStepsJson.getJSONObject(i));
             } catch (JSONException e) {
@@ -147,8 +139,7 @@ public class DataParser {
         return polylines;
     }
 
-    public String getPath(JSONObject googlePathJson)
-    {
+    public String getPath(JSONObject googlePathJson) {
         String polyline = "";
         try {
             polyline = googlePathJson.getJSONObject("polyline").getString("points");
@@ -158,8 +149,4 @@ public class DataParser {
         return polyline;
     }
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/master

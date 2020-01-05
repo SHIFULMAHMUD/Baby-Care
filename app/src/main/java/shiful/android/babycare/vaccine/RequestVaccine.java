@@ -11,10 +11,8 @@ import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-<<<<<<< HEAD:app/src/main/java/shiful/android/babycare/vaccine/RequestVaccine.java
+
 import android.view.WindowManager;
-=======
->>>>>>> origin/master:app/src/main/java/shiful/android/babycare/Vaccine/RequestVaccine.java
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;

@@ -3,12 +3,8 @@ package shiful.android.babycare.vaccine;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
-<<<<<<< HEAD:app/src/main/java/shiful/android/babycare/vaccine/ViewRequest.java
-import android.support.v7.app.AppCompatActivity;
-=======
-
 import androidx.appcompat.app.AppCompatActivity;
->>>>>>> origin/master:app/src/main/java/shiful/android/babycare/Vaccine/ViewRequest.java
+
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
@@ -31,10 +27,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-<<<<<<< HEAD:app/src/main/java/shiful/android/babycare/vaccine/ViewRequest.java
+
 import es.dmoral.toasty.Toasty;
-=======
->>>>>>> origin/master:app/src/main/java/shiful/android/babycare/Vaccine/ViewRequest.java
 import shiful.android.babycare.Constant;
 import shiful.android.babycare.R;
 
