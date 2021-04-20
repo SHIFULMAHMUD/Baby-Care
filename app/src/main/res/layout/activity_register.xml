@@ -50,7 +50,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/circle"
                 android:padding="10dp"
-                android:src="@drawable/img_register"
+                app:srcCompat="@drawable/img_register"
                 android:tint="#fff" />
 
             <TextView
@@ -73,7 +73,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="-10dp"
             android:rotation="45"
-            android:src="@drawable/square" />
+            app:srcCompat="@drawable/square" />
 
         <RelativeLayout
             android:id="@+id/relativeLayout1"
@@ -90,7 +90,7 @@
                 android:layout_height="40dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
-                android:src="@drawable/man"
+                app:srcCompat="@drawable/man"
                 android:tint="#fff" />
 
             <EditText
@@ -121,7 +121,7 @@
                 android:layout_height="40dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
-                android:src="@drawable/phone"
+                app:srcCompat="@drawable/phone"
                 android:tint="#FFF" />
             <EditText
                 android:layout_width="match_parent"
@@ -152,7 +152,7 @@
                 android:layout_height="40dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
-                android:src="@drawable/mail"
+                app:srcCompat="@drawable/mail"
                 android:tint="#FFF" />
 
             <EditText
@@ -184,7 +184,7 @@
                 android:layout_height="40dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
-                android:src="@drawable/gender"
+                app:srcCompat="@drawable/gender"
                 android:tint="#FFF" />
 
             <EditText
@@ -217,7 +217,7 @@
                 android:layout_height="40dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
-                android:src="@drawable/lock"
+                app:srcCompat="@drawable/lock"
                 android:tint="#FFF" />
 
             <EditText

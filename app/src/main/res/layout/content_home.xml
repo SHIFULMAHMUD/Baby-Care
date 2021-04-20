@@ -40,7 +40,7 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:layout_marginTop="5dp"
-                        android:src="@drawable/avatar"/>
+                        app:srcCompat="@drawable/avatar"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:layout_marginTop="5dp"
-                        android:src="@drawable/kid"/>
+                        app:srcCompat="@drawable/kid"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
                         android:layout_width="84dp"
                         android:layout_height="74dp"
                         android:padding="5dp"
-                        android:src="@drawable/doc"/>
+                        app:srcCompat="@drawable/doc"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -141,7 +141,7 @@
                     <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:src="@drawable/syringe"
+                        app:srcCompat="@drawable/syringe"
                         android:padding="5dp"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -183,7 +183,7 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:padding="5dp"
-                        android:src="@drawable/medical"/>
+                        app:srcCompat="@drawable/medical"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -214,7 +214,7 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:padding="5dp"
-                        android:src="@drawable/medical_center_nearby"/>
+                        app:srcCompat="@drawable/medical_center_nearby"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -254,7 +254,7 @@
                         android:layout_width="84dp"
                         android:layout_height="64dp"
                         android:padding="5dp"
-                        android:src="@drawable/parent"/>
+                        app:srcCompat="@drawable/parent"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -285,7 +285,7 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:padding="5dp"
-                        android:src="@drawable/vaccin"/>
+                        app:srcCompat="@drawable/vaccin"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

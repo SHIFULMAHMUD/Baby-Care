@@ -1,13 +1,10 @@
 package shiful.android.babycare.baby;
 
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -36,6 +33,9 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import es.dmoral.toasty.Toasty;
 import shiful.android.babycare.Constant;
 import shiful.android.babycare.R;
@@ -374,16 +374,8 @@ public class VaccineSchedule extends AppCompatActivity {
     public void  SaveCheckbox(final String mode, final String vaccine_id)
     {
         loading = new ProgressDialog(this);
-       // loading.setIcon(R.drawable.wait_icon);
-      //  loading.setTitle("Adding");
         loading.setMessage("Please wait....");
         loading.show();
-
-//            status="Given";
-//            mode="1";
-
-
-
 
         String URL = Constant.ADD_CHECKBOX_URL;
 
@@ -666,11 +658,6 @@ public class VaccineSchedule extends AppCompatActivity {
                         vaccine_status[12]="Not Given";
                     }
 
-
-
-
-
-//                    Log.d("data",vaccine_status[0]);
                 }
 
 

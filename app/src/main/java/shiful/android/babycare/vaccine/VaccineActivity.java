@@ -57,14 +57,6 @@ public class VaccineActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
 
         CustomList=(ListView)findViewById(R.id.vaccine_list);
-        //imgNoData=(ImageView)findViewById(R.id.imgNoData);
-
-
-/*getSupportActionBar().setHomeButtonEnabled(true); //for back button
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
-        getSupportActionBar().setTitle("Contacts");*/
-
-
 
         //call function to get data
         getData("");

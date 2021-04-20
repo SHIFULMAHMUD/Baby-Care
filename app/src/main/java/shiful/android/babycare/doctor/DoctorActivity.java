@@ -118,8 +118,6 @@ public class DoctorActivity extends AppCompatActivity {
 
     }
 
-
-
     private void showJSON(String response) {
 
         //Create json object for receiving json data

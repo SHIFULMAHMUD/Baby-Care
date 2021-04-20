@@ -48,7 +48,7 @@ tools:context=".baby.AddBaby">
                 android:layout_marginTop="20dp"
                 android:background="@drawable/circle"
                 android:padding="10dp"
-                android:src="@drawable/add_baby"
+                app:srcCompat="@drawable/add_baby"
                 android:tint="#fff" />
 
             <TextView
@@ -71,7 +71,7 @@ tools:context=".baby.AddBaby">
             android:layout_centerHorizontal="true"
             android:layout_marginTop="-10dp"
             android:rotation="45"
-            android:src="@drawable/square" />
+            app:srcCompat="@drawable/square" />
 
         <RelativeLayout
             android:id="@+id/relativeLayout1"
@@ -88,7 +88,7 @@ tools:context=".baby.AddBaby">
                 android:layout_height="40dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
-                android:src="@drawable/child"
+                app:srcCompat="@drawable/child"
                 android:tint="#fff" />
 
             <EditText
@@ -120,7 +120,7 @@ tools:context=".baby.AddBaby">
                 android:layout_height="40dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
-                android:src="@drawable/gender"
+                app:srcCompat="@drawable/gender"
                 android:tint="#FFF" />
 
             <EditText
@@ -154,7 +154,7 @@ tools:context=".baby.AddBaby">
                 android:layout_height="40dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
-                android:src="@drawable/bood"
+                app:srcCompat="@drawable/bood"
                 android:tint="#FFF" />
 
             <Spinner
@@ -185,7 +185,7 @@ tools:context=".baby.AddBaby">
                 android:layout_height="40dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
-                android:src="@drawable/date"
+                app:srcCompat="@drawable/date"
                 android:tint="#FFF" />
 
             <EditText
@@ -219,7 +219,7 @@ tools:context=".baby.AddBaby">
                 android:layout_height="40dp"
                 android:background="@color/colorPrimary"
                 android:padding="8dp"
-                android:src="@drawable/location"
+                app:srcCompat="@drawable/location"
                 android:tint="#FFF" />
 
             <EditText

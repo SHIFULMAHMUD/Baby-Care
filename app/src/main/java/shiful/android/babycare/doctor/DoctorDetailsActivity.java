@@ -37,11 +37,6 @@ public class DoctorDetailsActivity extends AppCompatActivity {
         getCell = getIntent().getExtras().getString("cell");
         getAddress = getIntent().getExtras().getString("address");
         getDescription = getIntent().getExtras().getString("description");
-/*
-        getSupportActionBar().setHomeButtonEnabled(true); //for back button
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
-        getSupportActionBar().setTitle("Contact Details");//for actionbar title*/
-
 
         txtName.setText(getName);
         txtCell.setText(getCell);

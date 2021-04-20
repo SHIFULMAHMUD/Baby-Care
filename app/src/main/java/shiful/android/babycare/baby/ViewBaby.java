@@ -60,11 +60,6 @@ public class ViewBaby extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
 
         CustomList=(ListView)findViewById(R.id.baby_list);
-        //imgNoData=(ImageView)findViewById(R.id.imgNoData);
-
-        /*getSupportActionBar().setHomeButtonEnabled(true); //for back button
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
-        getSupportActionBar().setTitle("Contacts");*/
 
         //Fetching cell from shared preferences
         SharedPreferences sharedPreferences;

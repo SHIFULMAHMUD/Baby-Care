@@ -1,0 +1,33 @@
+
+h
+java:S1104-"RMake hcName a static final constant or non-public and provide accessors if needed.(êôßÁ
+o
+java:S2293{"YReplace the type specification in this constructor call with the diamond operator ("<>").(èÒ’
+q
+java:S1104/"VMake hcLocation a static final constant or non-public and provide accessors if needed.(ÅùÃ†şÿÿÿÿ
+p
+java:S11040"UMake hcWebsite a static final constant or non-public and provide accessors if needed.(µë›Şùÿÿÿÿ
+S
+java:S1197/"8Move the array designator from the variable to the type.(ÅùÃ†şÿÿÿÿ
+S
+java:S11970"8Move the array designator from the variable to the type.(µë›Şùÿÿÿÿ
+N
+java:S1197."8Move the array designator from the variable to the type.(óÊ²ö
+g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–¥Û³
+g
+java:S1301À"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ
+a
+java:S1128""FRemove this unused import 'shiful.android.babycare.home.HomeActivity'.(úåûÿÿÿÿ
+j	java:S116'"URename this field "CustomList" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ–ˆŒ
+l	java:S117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç›˜§üÿÿÿÿ
+f	java:S117Œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê˜]
+m	java:S116+"SRename this field "MAX_SIZE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”üÇøşÿÿÿÿ
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æÔ¹Òúÿÿÿÿ
+f	java:S117^"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï•Ü²
+l	java:S117‹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şŠû½şÿÿÿÿ
+e
+java:S1128!"JRemove this unused import 'shiful.android.babycare.doctor.DoctorActivity'.(ıéİÃúÿÿÿÿ
+i
+java:S1104."SMake hcPhone a static final constant or non-public and provide accessors if needed.(óÊ²ö
+N
+java:S1197-"8Move the array designator from the variable to the type.(êôßÁ
